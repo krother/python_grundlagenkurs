@@ -1,5 +1,5 @@
 
-# Python Übungen
+# Python Grundlagenkurs
 
 Dies ist eine Sammlung von Übungen für
 
