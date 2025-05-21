@@ -1,89 +1,80 @@
-Look up Prices
-==============
+Preise nachschlagen
+===================
 
-In this chapter you will:
--------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
 ======= ====================================
-area    topic
+Bereich Thema
 ======= ====================================
-🚀      write a better receipt assistant
-⚙       define a dictionary
-⚙       look up values of a dictionary
-🔀      iterate through a list of dictionary keys
-🔀      use lists as dictionary values
-🐞      fix errors in dictionary definitions
-🐞      fix index errors
+🚀      das Abrechenprogramm verbessern
+⚙       ein Dictionary anlegen
+⚙       Werte im Dictionary nachschlagen
+🔀      über Schlüssel iterieren
+🔀      Listen als Werte verwenden
+🐞      Indexfehler beheben
 ======= ====================================
 
-Exercise 1: Look up
--------------------
+Aufgabe 1: Nachschlagen
+-----------------------
 
-Consider we would like to look up shopping prices.
-In this chapter, we will use a **dictionary**,
-a data structure that is good for looking up items.
+Wir möchten Einkaufspreise für Obst nachschlagen. Dazu eignet sich ein **Dictionary**, eine neue Datenstruktur.
 
-Execute the following code:
+Führe folgenden Code aus:
 
 .. code:: python3
 
-   prices = {
-      "apple": 0.50,
-      "banana": 1.00,
-      "orange": 1.50,
-      "cherries": 3.00,
+   preise = {
+      "Apfel": 0.50,
+      "Banane": 1.00,
+      "Orange": 1.50,
+      "Kirschen": 3.00,
    }
-   print(prices["banana"])
+   print(preise["Banane"])
 
-How does the dictionary differ from a list?
+Wie unterscheidet sich das Dictionary von einer Liste?
 
-
-Exercise 2: Explore
+Aufgabe 2: Erkunden
 -------------------
 
-Find out what each of the expressions does to the dictionary in the center.
+Finde heraus, was jeder der Ausdrücke mit dem Dictionary in der Mitte anstellt.
 
 .. figure:: dicts.png
-   :alt: dict exercise
+   :alt: dict Übung
 
 
-Exercise 3: Look up
--------------------
+Aufgabe 3: Listenverarbeitung
+-----------------------------
 
-Now consider having the list of items in ``fruit``.
-You would like to calculate the total price.
-For that, the list and dictionary need to work together.
+Diesmal hast du eine Liste von Einkäufen in der Variable `einkauf`.
+Du möchtest den Gesamtpreis berechnen.
+Dazu müssen Listen und Dictionaries zusammenarbeiten.
 
-Sort the lines and indent them properly:
+Sortiere die Codezeilen und rücke sie ein:
 
-   print(total)
-   total += prices[item]
-   bought = ["banana", "banana", "cherries", "apple", "apple", "banana"]
-   for item in bought:
-   total = 0
-   prices = {
-      "apple": 0.50,
-      "banana": 1.00,
-      "orange": 1.50,
-      "cherries": 3.00,
+   print(gesamt)
+   gesamt += preise[frucht]
+   einkauf = ["Banane", "Banane", "Kirschen", "Apfel", "Apfel", "Banane"]
+   for frucht in einkauf:
+   gesamt = 0
+   preise = {
+      "Apfel": 0.50,
+      "Banane": 1.00,
+      "Orange": 1.50,
+      "Kirschen": 3.00,
    }
 
-Exercise 4: Receipt assitant 2.0
---------------------------------
 
-Improve the receipt assistant from the previous chapter
-so that it uses a dictionary of prices.
+Aufgabe 4: Navigation
+---------------------
 
-
-Exercise 5: Traveler
---------------------
-
-The following program allows you to travel from one city to the next.
-Unfortunately, it contains **five bugs**. Find and fix them.
+Das folgende Programm erlaubt dir von einer Stadt in die nächste zu reisen.
+Es sind leider **fünf Bugs** enthalten.
+Finde und behebe sie.
 
 .. code:: python3
 
-   cities = {
+   staedte = {
        "New York": ["Tokyo", "Delhi", "London"],
        "Poznan": ["London", "Berlin"],
        "London": ["New York", "Poznan"]
@@ -92,49 +83,23 @@ Unfortunately, it contains **five bugs**. Find and fix them.
        "Delhi": ["Katmandu"]
        }
 
-   location = "Berlin"
-   print "\nYour task: fly to Katmandu\n"
+   standort = "Berlin"
+   print "\nZiel: fliege nach Katmandu\n"
 
-   while location in cities and location == 'Katmandu':
-       print(f"You are in {location}")
+   while standort in staedte and standort == 'Katmandu':
+       print(f"Du bist in {standort}")
 
-   print("There are flights to ", cities["location"])
-   location = input("Where would you like to travel?")
+   print("Es gibt Verbindungen nach ", staedte["standort"])
+   standort = input("Wohin möchtest du reisen?")
 
-   print("You have reached your destination")
-
-
-Exercise 6: Zip
----------------
-
-Simplify the following code using the function ``zip()``:
-
-.. code:: python3
-
-   fruits = ["apple", "banana", "orange", "cherries"]
-   prices = [0.5, 1.0, 1.5, 3.0]
-
-   table = []
-   i = 0
-   while i < len(fruits):
-       row = (fruits[i], prices[i])
-       table.append(row)
-       i += 1
-   print(table)
-
-Try the expression:
-
-.. code:: python3
-
-   for a, b in zip(fruits, prices):
-       ...
+   print("Du hast dein Ziel erreicht.")
 
 
-Reflection Questions
---------------------
+Reflexionsfragen
+----------------
 
--  How can you create a dictionary?
--  What data types can you use as keys of a dictionary?
--  What data types can you use as values of a dictionary?
--  How can you modify values in a dictionary?
--  Is it possible to run a for loop over a dictionary?
+-  Wie kannst du ein Dictionary erstellen?
+-  Welche Datentypen funktionieren als Schlüssel?
+-  Welche Datentypen funktionieren als Werte?
+-  Wie kannst Du Werte in einem Dictionary verändern?
+-  Kannst Du eine for-Schleife über ein Dictionary laufen lasssen?
