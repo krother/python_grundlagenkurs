@@ -38,13 +38,10 @@ Erste Schritte
    first_steps/dictionaries.md
    first_steps/indexing.rst
    first_steps/nested_lists.rst
-   first_steps/builtin_functions.rst
-   first_steps/slideshow.rst
    first_steps/babynames.rst
    first_steps/statistics.rst
    debugging/README.rst
    refactoring/refactoring.rst
-   challenges/text_adventure.rst
 
 --------------
 
@@ -78,6 +75,7 @@ Coding Challenges
    algorithmen/kings.md
    algorithmen/backpack_problem.md
    algorithmen/blockchain.md
+   challenges/text_adventure.rst
 
 --------------
 

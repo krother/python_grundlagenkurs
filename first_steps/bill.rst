@@ -1,73 +1,72 @@
-Receipts
-========
+Rechnungen
+==========
 
 .. image:: receipts.jpg
 
-Photo by `Carli Jeen on unsplash.com <https://unsplash.com/@carlijeen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash>`__
+Foto von `Carli Jeen auf unsplash.com <https://unsplash.com/@carlijeen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash>`__
  
 
-In this chapter you will:
--------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
-======= ====================================
-area    topic
-======= ====================================
-🚀      sum up numbers from shopping bills
-⚙       loop over a list
-💡      use the ``append`` method of the ``list`` data type
-🔀      transform a list into a new one
-🐞      fix value errors
-======= ====================================
+======= ===========================================
+Bereich Thema
+======= ===========================================
+🚀      Zahlen in einer Einkaufsliste summieren
+⚙       über Listen iterieren
+💡      die Methode ``list.append`` verwenden
+🔀      eine Liste in eine neue transformieren
+🐞      ValueErrors zu beheben
+======= ===========================================
 
 
-Exercise 1
+Aufgabe 1
 ----------
 
-To process larger amounts of data, we cannot invent a new variable name
-for every number. 
-Instead, we can store multiple number in a **list**.
+Um größere Datenmengen zu verarbeiten, können wir uns nicht für jede Zahl einen neuen Variablennamen ausdenken.
+Stattdessen speichern wir mehrere Zahlen in einer **Liste**.
 
-The program below sums up items on a list.
-Complete the code by inserting ``costs``, ``for``, ``item``, ``total``
+Das folgende Programm summiert Zahlen in einer Liste.
+Vervollständige den Code, indem du ``kosten``, ``for``, ``element``, ``summe`` einsetzt.
 
 .. code:: python
 
-   costs = [8, 5, 20, 12, 1]
-   total = 0
-   ___ item in ___:
+   kosten = [8, 5, 20, 12, 1]
+   summe = 0
+   ___ element in ___:
        ___ += ___
-   print(total)
+   print(summe)
 
 
-Exercise 2: List methods
-------------------------
+Aufgabe 2: Methoden von Listen
+------------------------------
 
-Find out what each expression does to the list in the center.
+Finde heraus was die Ausdrücke mit der Liste in der Mitte tun.
 
 .. figure:: lists.png
-   :alt: list exercise
+   :alt: Listen Aufgabe
 
 
-Exercise 3: Add an extra item 
------------------------------
+Aufgabe 3: Ein Element hinzufügen 
+---------------------------------
 
-You have an extra item you need to take into account:
+Du möchtest ein zusätzliches Element zur Liste hinzufügen:
 
 .. code:: python3
 
-   costs = [8, 5, 20, 12, 1]
+   kosten = [8, 5, 20, 12, 1]
    extra = 4
 
-Use a list method from exercise 2 to add the extra item to the list.
-Then calculate the sum.
+Verwende eine Methode aus Aufgabe 2, um das zusätzliche Element an die Liste anzuhängen.
+Rechne dann die Summe aus.
 
 
-Exercise 4: Concatenate
------------------------
+Aufgabe 4: Verketten
+--------------------
 
-Explain the difference between the following expressions:
+Erkläre den Unterchied zwischen folgenden Ausdrücken:
 
-::
+.. code:: python3
 
    [1, 2 + 3, 4]
 
@@ -80,63 +79,61 @@ Explain the difference between the following expressions:
    "[1, 2" + "3, 4]"
 
 
-
-Exercise 5: Puzzle
+Aufgabe 5: Puzzle
 ------------------
 
-Use the expressions to modify the list as indicated. Use each expression
-once.
+Verwende die Ausdrücke, um die Liste wie gezeigt zu verändern.
+Verwende jeden Ausdruck genau ein Mal.
 
 .. figure:: list_funcs2.png
-   :alt: list funcs exercise2
+   :alt: list funcs Aufgabe2
 
 
-Exercise 6: List transformation
--------------------------------
+Aufgabe 6: Listen Transformieren
+--------------------------------
 
-Sometimes it is useful to create a new list from an existing one.
-This is called **transforming** a list.
-Order the lines in the following program:
+Bisweilen ist es nützlich, eine Liste in eine neue umzuwandeln.
+Dies nennt man **Transformieren** der Liste.
+Sortiere die Zeilen in folgendem Programm:
 
 .. code:: python3
 
-   print(total)
-   costs = ["8", "5", "20", "12", "1"]
-   numbers.append(int(item))
-   for item in costs:
-   total = sum(numbers)
-   numbers = []
+   print(summe)
+   kosten = ["8", "5", "20", "12", "1"]
+   zahlen.append(int(item))
+   for item in kosten:
+   summe = sum(zahlen)
+   zahlen = []
 
 
-Exercise 7: Receipt assistant
------------------------------
+Aufgabe 7: Rechnungshelfer
+--------------------------
 
-Write a program that sums up shopping bills.
-The user enters amounts, one number at a time.
-If they enter nothing (an empty string),
-the program calculates the total value of the items entered. 
+Schreibe ein Programm, das Rechnungen zusammenzählt.
+Der Benutzer gibt Zahlen ein (eine auf einmal).
+Falls sie nichts eingeben (einen leeren String), rechnet das Programm den Gesamtwert der eingegebenen Beträge aus.
 
-The output of the program could look like this:
+Die Ausgabe des Programms könnte so aussehen:
 
 ::
 
-   Please enter the costs on your bills, one number at a time:
+   Bitte gibt Beträge auf den Rechnungen ein (eine Zahl pro Zeile):
    13
    8
    5
    21
 
-   The total cost of your bills is 47
+   Die Summe der Beträge ist 47
 
 
 .. hint::
 
-   You will need a ``while`` loop for entering the numbers.
+   Zum Eingeben der Werte benötigst du eine ``while``-Schleife.
 
 
-Reflection Questions
---------------------
+Reflexionsfragen
+----------------
 
--  How can you create a list?
--  How can you add an item to a list?
--  How can you run a for loop over a list?
+-  Wie kannst du eine Liste erstellen?
+-  Wie kannst du Elemente zu einer Liste hinzufügen?
+-  Wie kannst du eine `for`-Schleife über eine Liste laufen lassen?

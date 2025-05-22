@@ -1,132 +1,132 @@
-Cesar Cipher
-============
+Cäsar-Chiffer
+=============
 
 .. image:: enigma.jpg
 
-Photo by `Christian Lendl on unsplash.com <https://unsplash.com/@dchris?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash>`__
+Foto von `Christian Lendl auf unsplash.com <https://unsplash.com/@dchris?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash>`__
 
-In this chapter you will:
--------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
-======= ====================================
-area    topic
-======= ====================================
-🚀      encrypt and decrypt text
-⚙       index the positions of a string
-⚙       loop over a string
-💡      use the ``find`` method of the ``string`` data type
-🔀      build a longer string by concatenation
-🔀      use the same index for two strings
-🐞      fix index errors
-======= ====================================
+======= ======================================
+Bereich Thema
+======= ======================================
+🚀      Text ver- und entschlüsseln
+⚙       Positionen in Strings indizieren
+⚙       über Strings iterieren
+💡      die Methode ``str.find`` verwenden
+🔀      strings zu verbinden
+🔀      einen Index für zwei Strings verwenden
+🐞      Indexfehler beheben
+======= ======================================
 
 
-Exercise 1: Cesar Cipher
+Aufgabe 1: Cäsar-Chiffre
 ------------------------
 
-Execute the following code calculating a **Cesar Cipher**:
+Führe folgenden Code aus, der die **Cäsar-Chiffre** ausgibt:
 
 .. code:: python3
 
-   plain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
-   encrypted = "DEFGHIJKLMNOPQRSTUVWXYZABC "
+   klartext = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+   verschluesselt = "DEFGHIJKLMNOPQRSTUVWXYZABC "
 
    for i in range(26):
-       print(plain[i], " -> ", encrypted[i])
+       print(klartext[i], " -> ", verschluesselt[i])
 
-Explain what the code does.
+Erkläre was der Code tut.
 
 
-Exercise 2: String methods
+Aufgabe 2: String-Methoden
 --------------------------
 
-Find out what the expressions do to the string in the middle.
+Erkläre was die Ausdrücke mit dem Text in der Mitte tun.
 
 .. figure:: strings.png
 
-Exercise 3: Loop over a string
-------------------------------
+Aufgabe 3: Über Strings iterieren
+---------------------------------
 
-The following program should print the position in the alphabet of every character.
-Complete program by inserting ``char``, ``message``, ``plain`` and ``position``:
+Das folgende Programm sollte die Positionen jedes Programms im Alphabet ausgeben.
+Vervollständige es durch Einsetzen von ``buchstabe``, ``text``, ``alphabet`` und ``position``:
 
 .. code:: python3
 
-   plain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
-   message = "MY SECRET MESSAGE"
+   alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+   text = "MEINE GEHEIMBOTSCHAFT"
 
-   for char in ___:
+   for buchstabe in ___:
        position = ___.find(___)
-       print(char, "is in position", ___)
+       print(buchstabe, "ist in Position", ___)
 
-Why is the space at the end of ``plain`` important?
+Warum ist das Leerzeichen am Ende von ``alphabet`` wichtig?
 
-Exercise 4: String concatenation
---------------------------------
+Aufgabe 4: Strings verbinden?
+-----------------------------
 
-Explain the following code:
+Erkläre folgenden Code:
 
 .. code:: python3
 
-   encrypted = "DEFGHIJKLMNOPQRSTUVWXYZABC "
+   chiffre = "DEFGHIJKLMNOPQRSTUVWXYZABC "
 
    s = ""
-   s += encrypted[4]
-   s += encrypted[1]
-   s += encrypted[8]
-   s += encrypted[8]
-   s += encrypted[11]
+   s += chiffre[4]
+   s += chiffre[1]
+   s += chiffre[8]
+   s += chiffre[8]
+   s += chiffre[11]
    print(s)
 
-Exercise 5: Encryption
-----------------------
+Aufgabe 5: Verschlüsseln
+------------------------
 
-Write a program that:
+Schreibe ein Programm, welches:
 
-1. defines a plain and encrypted alphabet as 26-character strings
-2. reads a message from the keyboard
-3. defines an empty result string
-4. goes through each character of the message
-5. finds the position in the plain text alphabet
-6. looks up that position in the encrypted alphabet
-7. adds the encrypted character to the result string
-8. when all characters have been processed, output the result
+1. ein Klartext-Alphabet und ein verschlüsseltes Alphabe als Strings mit 26 Zeichen + Leerzeichen definiert
+2. eine Nachricht von der Tastatur einliest
+3. einen leeren String als Ergebnis definiert
+4. über jedes Zeichen der Nachricht iteriert
+5. die Position des Zeichens im Klartext-Alphabet findet
+6. die selbe Position im verschlüsselten Alphabet nachschlägt
+7. alle verschlüsselten Zeichen an das Ergebnis anhängt
+8. am Ende das Ergebnis ausgibt
 
 .. hint::
 
-   After each step, you should be able to run the program
-   and see what it already does.
+   Du solltest nach jedem dieser Schritte in der Lage sein,
+   das Programm auszuführen und zu prüfen was es schon kann.
 
-Exercise 6
+Aufgabe 6
 ----------
 
-Explain why the following code does the same as in exercise 1:
+Erkläre warum dieser Code das gleiche wie in Aufgabe 1 tut:
 
 .. code:: python3
 
-   plain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+   klartext = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
    for i in range(26):
-       print(plain[i], " -> ", plain[(i + 3) % 26])
+       print(klartext[i], " -> ", klartext[(i + 3) % 26])
 
-Can you use it to make your encryption program shorter?
+Kannst du dieses Muster verwenden, um das Verschlüsselungsprogramm zu vereinfachen?
 
 .. hint::
 
-   If you are not sure what happens, print the value of ``i`` inside the loop.
-
-Exercise 7
+   Falls du nicht sicher bist was überhaupt passiert, gib den Wert von ``i`` in der Schleife aus.
+   
+Aufgabe 7
 ----------
 
-Also write a program for **decryption**.
+Schreibe ein Programm, um den Text wieder zu **entschlüsseln**.
 
 .. hint::
 
-   How could you make sure that the input string is in upper case?
+   Kannst du irgendwie dafür sorgen daß der Eingabestring nur aus Grossbuchstaben besteht?
+   
+Reflexionsfragen
+----------------
 
-Reflection questions
---------------------
-
--  what happens when a string is followed by square brackets?
--  describe two ways to loop over the characters of a string?
--  what does the ``str.find()`` method do?
--  how can you add characters to a string?
+-  was passiert wenn hinter einer Stringvariablen eckige Klammern stehen?
+-  wie kannst du über alle Zeichen eines Strings iterieren?
+-  was tut die Methode ``str.find()``?
+-  wie kannst du Zeichen zu einem String hinzufügen?
