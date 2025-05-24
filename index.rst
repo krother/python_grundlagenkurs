@@ -51,30 +51,30 @@ Coding Challenges
 .. toctree:: 
    :maxdepth: 1
 
-   strings/pyramide.md
-   strings/schachbrett.md
-   strings/palindrome.md
-   strings/anagramme.md
-   strings/alaeddin.md
-   strings/regex.md
-   strings/roman.md
-   strings/encrypt.md
-   mathe/pythagoras.md
-   mathe/fakultaet.md
-   mathe/fibonacci.md
-   mathe/querprodukt.md
-   mathe/ggt.md
-   mathe/geburtstage.md
-   algorithmen/fizzbuzz.md
-   algorithmen/sortieralgorithmen.md
-   algorithmen/josephus.md
-   algorithmen/tree_traversal.md
-   algorithmen/graph_traversal.md
-   algorithmen/magisches_quadrat.md
-   algorithmen/tsp.md
-   algorithmen/kings.md
-   algorithmen/backpack_problem.md
-   algorithmen/blockchain.md
+   challenges/pyramide.md
+   challenges/schachbrett.md
+   challenges/palindrome.md
+   challenges/anagramme.md
+   challenges/alaeddin.md
+   challenges/regex.md
+   challenges/roman.md
+   challenges/encrypt.md
+   challenges/pythagoras.md
+   challenges/fakultaet.md
+   challenges/fibonacci.md
+   challenges/querprodukt.md
+   challenges/ggt.md
+   challenges/geburtstage.md
+   challenges/fizzbuzz.md
+   challenges/sortieralgorithmen.md
+   challenges/josephus.md
+   challenges/tree_traversal.md
+   challenges/graph_traversal.md
+   challenges/magisches_quadrat.md
+   challenges/tsp.md
+   challenges/kings.md
+   challenges/backpack_problem.md
+   challenges/blockchain.md
    challenges/text_adventure.rst
 
 --------------

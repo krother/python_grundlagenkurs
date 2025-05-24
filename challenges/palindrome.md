@@ -3,13 +3,11 @@
 
 **🎯 Schreibe eine Funktion, die überprüft, ob ein String ein Palindrom ist:**
 
-    :::python3
     def is_palindrome(s):
         ...
 
 ## Tests
 
-    :::python3
     assert is_palindrome('Abba')
     assert is_palindrome('Legovogel')
     assert is_palindrome('Retsinakanister')

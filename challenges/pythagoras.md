@@ -17,7 +17,6 @@
 
 Mit Den Funktionen `input()`, `print()` und `int()` kannst Du ein interaktives Rechenprogramm schreiben. Das folgende Beispielprogramm enthält noch 3 Fehler. Behebe sie:
 
-    :::python3
     a = input("Gib die erste Zahl ein: ")
     b = input("Gib die zweite Zahl ein: ")
 
@@ -31,7 +30,6 @@ Mit Den Funktionen `input()`, `print()` und `int()` kannst Du ein interaktives R
 
 Ändere den Verarbeitungsteil, so dass die positive Differenz beider Zahlen berechnet wird. Verwende dazu die Funktion `abs()`:
 
-    :::python3
     print(abs(-1.23))
 
 ### Aufgabe 3: Das Modul math
@@ -40,7 +38,6 @@ Nun werden wir anspruchsvollere Berechnungen durchführen.
 Dazu brauchst Du das Modul `math`. Es enthält nützliche *Konstanten* und *Funktionen*.
 Hier ist als Beispiel eine Kreisberechnung:
 
-    :::python3
     import math
 
     radius = 5.0
@@ -57,7 +54,6 @@ Verwende die Funktion `round()`, um das Ergebnis aus Aufgabe 3 auf zwei Nachkomm
 
 Beispiel:
 
-    :::python3
     print(round(1.234, 2))
 
 

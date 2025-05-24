@@ -3,7 +3,6 @@
 
 **🎯 Finde den Weg aus dem Labyrinth.**
 
-    :::python3
     maze = """
     ############
     #     # ##S#

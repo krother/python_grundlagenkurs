@@ -3,7 +3,6 @@
 
 **🎯 Schreibe ein Programm, das folgendes Bild ausgibt:**
 
-    :::python
          *
         ***
        *****
@@ -17,7 +16,6 @@ Erzeuge Pyramiden mit einer unterschiedlichen Anzahl Stufen
 
 Erzeuge ein Triforce:
 
-    :::python
          *
         ***
        *****
