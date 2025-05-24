@@ -1,9 +1,21 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["first_steps"]
+
 [project]
 name = "python-grundlagenkurs"
 version = "0.1.0"
-description = "Add your description here"
+authors = [
+    {name = "Kristian Rother", email = "kristian.rother@posteo.de"},
+]
+description = "Python Aufgaben für Einsteiger"
 readme = "README.md"
-requires-python = ">=3.13"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.12"
 dependencies = [
     "furo>=2024.8.6",
     "myst-parser>=4.0.1",
