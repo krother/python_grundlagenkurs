@@ -1,51 +1,64 @@
-Installing Python
-=================
+Python installieren
+===================
 
-In this chapter you will:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: ../images/schlangen.jpg
 
-==== ==============================================
-area topic
-==== ==============================================
-🔧   install the Anaconda Python distribution
-🔧   launch the Spyder editor
-==== ==============================================
+In diesem Kapitel lernst Du:
+----------------------------
 
+======= ==============================================
+Bereich Thema
+======= ==============================================
+🔧       Python installieren
+🔧       Visual Studio Code starten
+💼       eine Python-Anweisung ausführen  
+======= ==============================================
 
-The first step into programming is to get Python installed on your
-computer. You will need two programs: **Python** itself and an
-**editor** to write code. A convenient way to install both in one go is
-**Anaconda**, a Python distribution with many pre-installed packages.
-Download it from `www.anaconda.com <https://www.anaconda.com/>`__ and
-follow the instructions.
+Der erste Schritt in die Welt des Programmierens ist, Python auf Deinem Computer zu installieren.
+In diesem Kurs verwenden wir `Python 3 <https://www.python.org>`__ .
+Für diesen Kurs müssen zwei Programme installiert werden: **Python** und **Visual Studio Code**.
+Unten findest du eine Anleitung zur Installation dieser Programme unter Windows.
+Unter Linux und MacOS ist es etwas einfacher.
 
-After installing, launch the **Spyder** editor from the **Anaconda
-Navigator**. It should look like this:
+Python – Standarddistribution
+-----------------------------
+Verwende die Standarddistribution von Python:
 
-|image0|
+1. Lade **Python 3.13** von `https://www.python.org/downloads/ <https://www.python.org/downloads/>`__ (oben auf der Seite) herunter
+2. Starte das Installationsprogramm. Achte darauf, das Häkchen bei **“Add Python to PATH”** zu aktivieren. 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+Installation testen
++++++++++++++++++++
 
-Generally, you can use any text editor to write Python code. Besides
-Spyder, I recommend **Visual Studio Code** and **PyCharm**, although
-both are not that easy to configure.
-
-If you prefer to use the standard Python installation, you find it on
-`www.python.org <https://www.python.org/downloads/>`__.
-In that case, install spyder using the Python package manager ``pip``.
-Type:
+1. Öffne eine PowerShell oder die Eingabeaufforderung.
+2. Gib ein:
 
 ::
 
-   pip install spyder
+    python
+    
+Die Python-Eingabeaufforderung >>> sollte erscheinen – fertig.
 
-Reflection Questions
-~~~~~~~~~~~~~~~~~~~~
 
-- Which text editors are installed on your system?
-- Which Python version are you running?
-- Name some advantages/disadvantages of the Python language
+Visual Studio Code (VS Code)
+----------------------------
+Visual Studio Code ist ein leichtgewichtiger, aber leistungsstarker Editor mit Unterstützung für Debugging, Syntaxhervorhebung und Erweiterungen – einschließlich Python.
 
-.. |image0| image:: spyder.png
+1. Lade VS Code von `https://code.visualstudio.com/download <https://code.visualstudio.com/download>`__ herunter
+2. Starte das Installationsprogramm und verwende die Standardoptionen.
+3. Installiere die Python-Erweiterung
+   3.1 Öffne VS Code.
+   3.2 Drücke Ctrl+Shift+X, um den Erweiterungsbereich zu öffnen (oder klicke auf das Symbol mit den vier Quadraten).
+   3.3 Suche nach Python und installiere die offizielle Erweiterung von Microsoft.
 
+Wenn Python korrekt erkannt wurde, sollte eine Python-Version (z. B. 3.13.3) unten rechts im Fenster angezeigt werden. Eventuell mußt du auf das Feld rechts unten klicken, um die Python-Version auszuwählen. VS Code sollte das installierte Python selbst finden.
+
+Python in VS Code testen
+++++++++++++++++++++++++
+Zuletzt solltest du ausprobieren ob Python wirklich funktioniert.
+
+1. Erstelle eine neue Datei (mit Strg-n) und speichere sie unter dem Namen hello.py. Achte darauf, dass nach der Endung .py nichts weiter folgt.
+2. Füge die Codezeile ``print("hello world")`` ein
+3. Klicke auf die Ausführen-Schaltfläche (▶️) oben rechts.
+
+Wenn ``hello world`` im Terminal unten ausgegeben wird, funktioniert alles korrekt. Herzlichen Glückwunsch!
