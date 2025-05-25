@@ -1,49 +1,46 @@
-Statistics
-==========
+Statistik
+=========
 
-Writing all instructions into a single sequence creates programs that
-are hard to debug. Here, you learn to break the code down into smaller
-units: **functions**.
+Wenn man alle Anweisungen in ein einzigen Anweisungsblock schreibt, entstehen Programme, die schwer zu verstehen und zu debuggen sind.
+In diesem Kapitel lernst du, den Code in **Funktionen**, also kleinere Einheiten aufzuteilen.
 
-In this chapter you learn:
---------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
-==== ==============================================
-area topic
-==== ==============================================
-🚀   calculate statistics
-⚙    implement a function
-⚙    call a function you defined
-💡   use the ``math`` module
-💡   use the ``sum`` function
-🔀   use a recursive function
-==== ==============================================
+======= ==============================================
+Bereich Thema
+======= ==============================================
+🚀       Statistiken berechnen
+⚙        eine Funktion implementieren
+⚙        eine selbst definierte Funktion aufrufen
+💡       das Modul ``math`` verwenden
+💡       die Funktion ``sum`` verwenden
+🔀       eine rekursive Funktion nutzen
+======= ==============================================
 
 
-Exercise 1: Sum up
-------------------
+Aufgabe 1: Aufsummieren
+-----------------------
 
-Write a function that calculates a sum from a list of numers. Insert
-into the gaps: ``numbers``, ``data``, ``def``, ``return``,
-``calc_sum',``\ +=\`
+Schreibe eine Funktion, die die Summe einer Liste von Zahlen berechnet. Füge in die Lücken ein: ``zahlen``, ``daten``, ``def``, ``return``, ``calc_sum``, ``+=``
 
 .. code:: python3
 
-   ____ calc_sum(data):
+   ____ calc_sum(daten):
        total = 0
        for n in ____:
            total ____ n
        ____ total
 
-   numbers = [12562, 2178, 342, 129, 384, 208, 164, 82, 41]
+   zahlen = [12562, 2178, 342, 129, 384, 208, 164, 82, 41]
    s = ____(____)
    print(s)
 
 
-Exercise 2: Mean
-----------------
+Aufgabe 2: Mittelwert
+---------------------
 
-Write a function that calculates the arithmetic mean from the following numbers:
+Schreibe eine Funktion, die den arithmetischen Mittelwert der folgenden Zahlen berechnet:
 
 .. code:: python3
 
@@ -54,24 +51,23 @@ Write a function that calculates the arithmetic mean from the following numbers:
 
    ...
 
-Don't forget about the ``return`` statement.
+Vergiss den ``return``-Befehl nicht.
 
 
-Exercise 3: Shortcut
+Aufgabe 3: Abkürzung
 --------------------
 
-Simplify the mean function using the function ``sum()``.
+Vereinfache die Mittelwertfunktion, indem du die Funktion ``sum()`` verwendest.
 
-Use your own or the builtin ``sum()`` function.
+Du kannst deine eigene oder die eingebaute ``sum()``-Funktion verwenden.
 
 
-Exercise 4: Standard Deviation
-------------------------------
+Aufgabe 4: Standardabweichung
+-----------------------------
 
-The following program calculates the standard deviation from a list of
-numbers. You would like to generalize the code, so that it can be used
-with other data sets. Wrap the code for the calculation – but not the
-data – in a function.
+Das folgende Programm berechnet die Standardabweichung einer Zahlenliste.  
+Du möchtest den Code verallgemeinern, sodass er mit anderen Datensätzen funktioniert.  
+Verpacke den Berechnungsteil – aber nicht die Daten – in eine Funktion.
 
 .. code:: python3
 
@@ -79,21 +75,21 @@ data – in a function.
 
    data = [12562, 2178, 342, 129, 384, 208, 164, 82, 41]
 
-   avg = mean(data)
+   mittelwert = mean(data)
 
-   stdsum = 0.0
+   summe = 0.0
    for n in data:
-       stdsum += (n - avg) ** 2
-   variance = stdsum / len(data)
-   stdev = math.sqrt(variance)
+       summe += (n - mittelwert) ** 2
+   varianz = summe / len(data)
+   stabw = math.sqrt(varianz)
 
-   print(f"Standard Deviation: {stdev:8.2f}")
+   print(f"Standardabweichung: {stabw:8.2f}")
 
 
-Exercise 5: Optional Parameters
--------------------------------
+Aufgabe 5: Optionale Parameter
+------------------------------
 
-Explain the program:
+Erkläre das Programm:
 
 .. code:: python3
 
@@ -106,30 +102,29 @@ Explain the program:
    print(add(b=4))
 
 
-Exercise 6: Recursion
----------------------
+Aufgabe 6: Rekursion
+--------------------
 
-Explain the code:
+Erkläre den folgenden Code:
 
 .. code:: python3
 
    def factorial(n):
-       """Calculates the factorial of the given number."""
+       """Berechnet die Fakultät der angegebenen Zahl."""
        if n > 1:
            return n * factorial(n - 1)
        else:
            return 1
 
-
-   x = int(input('Please enter a number: '))
+   x = int(input('Bitte gib eine Zahl ein: '))
    y = factorial(x)
-   print (f"The result is:\n{x}! = {y}}")
+   print(f"Das Ergebnis ist:\n{x}! = {y}")
 
 
-Reflection Questions
---------------------
+Reflexionsfragen
+----------------
 
--  Why is it useful to write functions?
--  What do you need to write in a function definition?
--  How do you call a function?
--  What does the ``return`` statement do?
+-  Warum ist es sinnvoll, Funktionen zu schreiben?
+-  Was muss in einer Funktionsdefinition stehen?
+-  Wie ruft man eine Funktion auf?
+-  Was macht die ``return``-Anweisung?

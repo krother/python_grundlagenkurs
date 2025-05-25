@@ -14,15 +14,39 @@ Bereich Thema
 ======= ==============================================
 
 
-Aufgabe 1: Bedingte Schleifen Loops
-----------------------------
+Aufgabe 1: Bedingte Schleifen
+-----------------------------
 
-In diesem Kapitel lernst Du eine neue Möglichkeit, den *Ablauf* eines Programms (den **Kontrollfluß**) zu steuern: Die bedingte Schleife mit `while`.
+In diesem Kapitel lernst Du eine neue Möglichkeit, den *Ablauf* eines Programms (den **Kontrollfluß**) zu steuern: Die bedingte Schleife mit ``while``.
+Hier sind drei unvollständige Beispiele für ``while``-Schleifen:
 
-Sortiere die Ausdrücke ein, so dass die ``while``-Schleifen die entsprechende Anzahl von Durchläufen haben.
+.. code:: python3
 
-.. figure:: ../images/while.png
-   :alt: while Aufgabe
+   x = 5
+   while ___:
+       x = x -1
+       print("A", x)
+
+   x = 1
+   while ___:
+       x = 2 * x
+       print("B", x)
+
+   x = 0
+   while ___:
+       x = x + 5
+       print("C", x)
+
+
+Setze die folgenden Ausdrücke ein, so dass jede ``while``-Schleife genau fünf Mal durchlaufen wird:
+
+* ``x <= 20``
+* ``x != 0``
+* ``x < 30``
+
+.. hint::
+
+   ``print``-Befehle an verschiedenen Stellen sind eine gute Möglichkeit, zu untersuchen, was Dein Programm gerade tut.
 
 Aufgabe 2: Syntax
 -----------------
@@ -40,17 +64,47 @@ Welche der folgenden `while`-Befehle sind korrekt?
    while a + 7:
       ...
 
-   while len(c) > 10:
-      ...
-
    while a and (b-2 == c):
       ...
 
-   while s.find('c') >= 0:
-      ...
+
+Aufgabe 3: Quadratzahlen
+------------------------
+
+Das folgende Programm soll Quadratzahlen ausgeben.
+Es landet jedoch in einer **Endlosschleife**.
+Finde heraus, wie du das Programm unterbrechen kannst. Behebe den Fehler.
+
+.. code:: python3
+
+   zahl = 1
+   while zahl <= 10:
+       print(zahl ** 2)
 
 
-Aufgabe 3: Zahlenraten
+Aufgabe 4: Wiederholung
+-----------------------
+
+Mit einer Schleife kannst Du Vorgänge **wiederholen**. Dabei kann ein Schleifendurchlauf das Ergebnis des vorherigen verwenden.
+Das folgende Programm verwendet eine **Zählvariable** und ein **Zwischenergebnis**, um Ziffern auszugeben:
+
+.. code:: python3
+
+   ergebnis = ""
+   durchlauf = 1
+       while durchlauf < 10:
+           ergebnis = ergebnis + str(durchlauf)
+           durchlauf = durchlauf + 1
+   print(ergebnis)
+
+Ändere das Programm, so dass es folgendes:
+
+- starte mit einem Reiskorn auf dem ersten Feld eines Schachbretts
+- verdopple die Anzahl Reiskörner auf dem nächsten Feld
+- verfahre so für alle 64 Felder
+- gib die Anzahl Reiskörner auf dem letzten Feld aus
+
+Aufgabe 5: Zahlenraten
 ----------------------
 
 Im Spiel **Zahlenraten** versucht der Spieler eine Zahl zu erraten, die sich der Computer ausgedacht hat.

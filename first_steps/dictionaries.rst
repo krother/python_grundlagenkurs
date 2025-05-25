@@ -7,10 +7,8 @@ In diesem Kapitel lernst du:
 ======= ====================================
 Bereich Thema
 ======= ====================================
-🚀      das Abrechenprogramm verbessern
 ⚙       ein Dictionary anlegen
 ⚙       Werte im Dictionary nachschlagen
-🔀      über Schlüssel iterieren
 🔀      Listen als Werte verwenden
 🐞      Indexfehler beheben
 ======= ====================================
@@ -49,8 +47,9 @@ Aufgabe 3: Listenverarbeitung
 Diesmal hast du eine Liste von Einkäufen in der Variable `einkauf`.
 Du möchtest den Gesamtpreis berechnen.
 Dazu müssen Listen und Dictionaries zusammenarbeiten.
-
 Sortiere die Codezeilen und rücke sie ein:
+
+.. code:: python3
 
    print(gesamt)
    gesamt += preise[frucht]

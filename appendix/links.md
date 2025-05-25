@@ -8,7 +8,6 @@
 ## Interaktive Programmierübungen
 
 * [www.codewars.com](http://www.codewars.com/) – Viele kleine Aufgaben in 7+ Sprachen. Die Ergebnisse werden automatisch geprüft.
-* [rosalind.info/problems/locations/](http://rosalind.info/problems/locations/) – Katas für Bioinformatiker.
 * [projecteuler.net](http://projecteuler.net) – Mathematische Probleme, die sich mit einem Programm lösen lassen.
 * [PostgreSQL Exercises](https://pgexercises.com/) – SQL-Übungen
 

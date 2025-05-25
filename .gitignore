@@ -3,3 +3,4 @@
 _site/*
 _build/
 uv.lock
+build/*

@@ -22,18 +22,18 @@ Bereich Thema
 ======= =============================================
 
 Ein wichtiges Strukturelement in einem Programm ist das *Treffen von Entscheidungen*.
-In Python entscheidet die Anweisung `if`, welche Anweisung als Nächstes ausgeführt wird.
+In Python entscheidet die Anweisung ``if``, welche Anweisung als Nächstes ausgeführt wird.
 
 Aufgabe 1: Entscheidung
 -----------------------
 
-Mit der `if`-Anweisung kannst Du im Programm Entscheidungen treffen.
+Mit der ``if``-Anweisung kannst Du im Programm Entscheidungen treffen.
 
 Teste das folgende Programm mit unterschiedlichen Eingaben:
 
 .. code:: python3
 
-   spieler = input("Bitte gib R, P oder S ein (für [R]ock, [P]aper, [S]cissors): ")
+   spieler = input("Bitte gib R, P oder S ein (für Sche[R]e, [S]tein, [P]apier): ")
    computer = "P"
    
    if spieler == computer:
@@ -42,18 +42,18 @@ Teste das folgende Programm mit unterschiedlichen Eingaben:
 Aufgabe 2: Alternative Entscheidungen
 -------------------------------------
 
-Füge `if`, `elif` und `else` an den richtigen Stellen im Code ein, damit er funktioniert:
+Füge ``if``, ``elif`` und ``else`` an den richtigen Stellen ein, damit das Programm funktioniert:
 
 .. code:: python3
 
    import random
    
-   spieler = input("Bitte gib R, P oder S ein (für [R]ock, [P]aper, [S]cissors): ")
+   spieler = input("Bitte gib R, P oder S ein (für Sche[R]e, [S]tein, [P]apier): ")
    computer = random.choice('RPS')
    
-   ___ spieler == 'R' and computer == 'P':
+   ___ spieler == 'S' and computer == 'P':
        print("Computer gewinnt")
-   ___ spieler == 'R' and computer == 'S':
+   ___ spieler == 'R' and computer == 'P':
        print("Spieler gewinnt")
    ___:
        print("Unentschieden")
@@ -62,7 +62,7 @@ Füge `if`, `elif` und `else` an den richtigen Stellen im Code ein, damit er fun
 Aufgabe 3: Papier
 -----------------
 
-Erweitere das Programm so, dass es auch funktioniert, wenn der Spieler *Papier* wählt.
+Erweitere das Programm so, dass es auch funktioniert, wenn der Computer *Stein* wählt.
 
 Aufgabe 4: Debugging
 --------------------
@@ -77,17 +77,17 @@ Behebe jeweils einen Fehler in jedem der folgenden Entscheidungsblöcke:
    elif spieler == computer
        print('Du hast das Gleiche gewählt wie ich.')
    
-   if spieler = 'S':
+   if spieler = 'R':
        print('Du hast "Schere" gewählt.')
    
    else:
    print('Du hast etwas anderes als "Schere" gewählt.')
 
 
-Aufgabe 5: Ausdrücke
---------------------
+Aufgabe 5: Wahrheitsausdrücke
+-----------------------------
 
-Welche der folgenden booleschen Ausdrücke ergeben den Wert `True`?
+Welche der folgenden booleschen Ausdrücke ergeben den Wert ``True``?
 
 .. code:: python3
 
@@ -109,14 +109,14 @@ Welche der folgenden booleschen Ausdrücke ergeben den Wert `True`?
 Aufgabe 6: Zustandsvariablen
 ----------------------------
 
-Das folgende Programm speichert das Ergebnis eines Vergleichs in einer `bool`-Variablen.
+Das folgende Programm speichert das Ergebnis eines Vergleichs in einer ``bool``-Variablen.
 Vervollständige den Code:
 
 .. code:: python3
 
    spieler_gewinnt = (
-                    (spieler == "R" and computer == "S")     or
-                    (spieler == "P" and ___) or
+                    (spieler == "P" and computer == "S")     or
+                    (spieler == "S" and ___) or
                     (___)
                   )
 
@@ -133,10 +133,10 @@ Vervollständige das Programm so, dass es alle möglichen Situationen abdeckt:
 
    winner = 'Unentschieden'
    
-   if spieler == "S":
+   if spieler == "R":
        if computer == "P":
            winner = "Spieler"
-       elif computer == "R":
+       elif computer == "S":
            winner = "Computer"
    
    elif spieler == "P":
@@ -147,7 +147,7 @@ Vervollständige das Programm so, dass es alle möglichen Situationen abdeckt:
 
 .. hint::
 
-   Ein *verschachteltes if* ist ein `if` innerhalb eines anderen `if`-Blocks.
+   Ein *verschachteltes if* ist ein ``if`` innerhalb eines anderen ``if``-Blocks.
 
 Aufgabe 8: Schere-Stein-Papier
 ------------------------------
@@ -159,15 +159,15 @@ Optionale Ziele:
 
 * berücksichtige Unentschieden als Möglichkeit
 * sowohl Gross- als auch Kleinbuchstaben sind als Eingabe möglich
-* verwende einen einzigen `if..elif..else` Block
+* verwende einen einzigen ``if..elif..else`` Block
 * erweitere das Spiel durch [Eidechse und Spock](https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons)
-* verwende Zustandsvariablen, so dass nur eine oder zwei `if`-Anweisungen (ohne `elif` oder `else`) übrig bleiben
+* verwende Zustandsvariablen, so dass nur eine oder zwei ``if``-Anweisungen (ohne ``elif`` oder ``else``) übrig bleiben
 
 Reflexionsfragen
 ----------------
 
-* In welcher Reihenfolge müssen die Teile einer `if`-Anweisung stehen?
-* Welche Teile einer `if`-Anweisung sind optional?
+* In welcher Reihenfolge müssen die Teile einer ``if``-Anweisung stehen?
+* Welche Teile einer ``if``-Anweisung sind optional?
 * Was ist eine *Einrückung*?
 * Welche *Vergleichsoperatoren* kennst du bereits?
 

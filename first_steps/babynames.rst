@@ -1,146 +1,127 @@
-Baby Names
-==========
+Babynamen
+=========
 
-In this chapter you will:
--------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
-======= ====================================
-area    topic
-======= ====================================
-🚀      analyze birth statistics
-💡      use the ``open`` function to read and write files
-💡      use the ``os`` module to loop through a directory
-🔀      parse comma-separated files
-🐞      fix FileNotFound errors
-======= ====================================
+======= =======================================================================
+Bereich Thema
+======= =======================================================================
+🚀       Geburtenstatistiken analysieren
+💡       Dateien mit der Funktion ``open`` lesen und schreiben
+💡       mit dem Modul ``os`` durch ein Verzeichnis iterieren
+🔀       Komma-separierte Dateien (CSV) einlesen
+🐞       Fehler vom Typ ``FileNotFoundError`` beheben
+======= =======================================================================
 
-The dataset of U.S. baby names
+Der Datensatz der US-Babynamen
 ------------------------------
 
 .. figure:: ../images/baby.png
-   :alt: Babynames
+   :alt: Babynamen
 
-For this chapter, you will need to download a data set of baby
-names. The authorities of the United States have recorded the first
-names of all people born as U.S. citizens since 1880. The dataset is
-publicly available on `www.ssa.gov/oact/babynames/limits.html <http://www.ssa.gov/oact/babynames/limits.html>`__. 
+Für dieses Kapitel musst du einen Datensatz mit Babynamen herunterladen.
+Die Behörden der Vereinigten Staaten haben die Vornamen aller seit 1880 geborenen US-Bürger:innen aufgezeichnet.
+Der Datensatz ist öffentlich zugänglich unter:
+`www.ssa.gov/oact/babynames/limits.html <http://www.ssa.gov/oact/babynames/limits.html>`__
 
-Download the shorter archive of baby names (not grouped by states).
+Lade das kleinere Archiv mit Babynamen herunter (nicht nach Bundesstaaten gruppiert).
 
 .. note::
 
-   For the protection of privacy only names used
-   at least 5 times appear in the data.
+   Zum Schutz der Privatsphäre werden nur Namen aufgeführt,
+   die mindestens 5-mal vergeben wurden.
 
+Aufgabe 1: Eine Datei lesen
+---------------------------
 
-Exercise 1: Read a file
------------------------
-
-Unzip the downloaded archive and place the folder next to your Python program.
-Read one of the files by inserting ``line``, ``line``, ``open`` and
-``print`` into the gaps.
+Entpacke das heruntergeladene Archiv und platziere den Ordner neben deinem Python-Programm.
+Lies eine der Dateien, indem du ``zeile``, ``zeile``, ``open`` und ``print`` in die Lücken einfügst.
 
 .. code:: python3
 
    for ___ in ___(r"names/yob2022.txt"):
        if "Maria" in ___:
-          ___(line)
+           ___(zeile)
 
 .. hint::
 
-   Depending on your editor, you may need to insert the complete path to
-   the file insted of ``names/``.
-   On Windows, the ``r`` is important to have Python correctly interpret
-   backslashes as separators.
+   Eventuell musst den vollständigen Pfad zur Datei angeben statt ` `names/`.
+   Unter Windows ist das Präfix `r` wichtig, damit Python Backslashes korrekt interpretiert.
 
-Exercise 2: Distinct names
---------------------------
+Aufgabe 2: Unterschiedliche Namen
+---------------------------------
 
-How many different *girls names* were there in 2022?
+Wie viele verschiedene *Mädchennamen* gab es im Jahr 2022?
 
-**Sort** the following code lines and **indent them correctly**:
+**Sortiere** die folgenden Codezeilen und **rücke sie korrekt ein**:
 
 .. code:: python3
 
-   girls = 0
+   namen = 0
    if "B" in line:
-   print(girls)
+   print(namen)
    if ",F," in line:
    for line in open(r"names/yob2022.txt"):
-   girls += 1
+   namen += 1
 
-Exercise 3
-----------
+Aufgabe 3: Jungennamen
+----------------------
 
-Extend the program from the previous exercise such that boys and girls
-names are counted separately.
+Erweitere das Programm aus der vorherigen Aufgabe so, dass Jungen- und Mädchennamen getrennt gezählt werden.
 
+Aufgabe 4: Häufige Namen
+------------------------
 
-Exercise 4: Frequent names
---------------------------
-
-The following program collects names in a list that occur at least 10000
-times. Unfortunately, the program contains **four errors**. Find and fix
-these.
+Das folgende Programm sammelt Namen in einer Liste, die mindestens 10000 Mal vorkommen.
+Leider enthält das Programm **vier Fehler**. Finde und korrigiere sie.
 
 .. code:: python3
 
-   frequent = []
-
+   top = []
+   
    for line in open(r"names/yob2022.txt"):
        columns = line.strip().split(",")
        name = colums[1]
        if int(columns[3]) >= 10000
-           frequent.append(name)
+           top.append(name)
+   
+   print(top)
 
-   print(frequent)
+Aufgabe 5: Anzahl Babys
+-----------------------
 
+Schreibe ein Programm, das die Gesamtzahl der Babys im Jahr 2023 berechnet und auf dem Bildschirm ausgibt.
+Vergleiche diese Zahl mit dem Jahr 1923.
 
-Exercise 5: Total babies
-------------------------
+Aufgabe 6: Eine Datei schreiben
+-------------------------------
 
-Write a program that calculates the total number of babies for the year
-2022 and writes it to the screen. Compare that number with the year 1922.
-
-
-Exercise 6: Read and write
---------------------------
-
-Form pairs of Python commands and their meanings.
-
-.. figure:: ../images/files.png
-   :alt: file exercise
-
-
-Exercise 7: Write a file
-------------------------
-
-Execute the following program. Explain what happens.
+Führe das folgende Programm aus. Erkläre, was passiert.
 
 .. code:: python3
 
-   names = ["Ada", "Bob", "Charlie", "Dorothy"]
-
+   namen = ["Ada", "Bob", "Charlie", "Dorothy"]
+   
    with open(r"names.txt", "w") as f:
-      for name in names:
-          f.write(name + "\n")
+       for name in names:
+       f.write(name + "\n")
 
 .. hint::
 
-   What happens if you remove the ``\n`` from the program?
+   Was passiert, wenn du das `\n` im Programm entfernst?
 
+Aufgabe 7: f-Strings
+--------------------
 
-Exercise 8: f-Strings
----------------------
-
-Try the following commands in a Python shell:
+Probiere die folgenden Befehle in einer Python-Konsole aus:
 
 .. code:: python3
 
    name = "Ada"
    number = 42
    pi = 3.14159
-
+   
    print(f"{name}")
    print(f"{name:>10}")
    print(f"{number:5d}")
@@ -149,64 +130,56 @@ Try the following commands in a Python shell:
    print(f"{pi:6.3f}")
    print(f"name: {name}    number: {number}    pi: {pi:6.3f}")
 
+Aufgabe 8: Verzeichnisse:
+-------------------------
 
-Exercise 9: Directories
------------------------
+Um größere Datenmengen zu verarbeiten, musst du mit mehr als einer Datei arbeiten.
+Manchmal kennst du die Namen der Dateien nicht im Voraus.
+Das Modul ``os`` ist sehr nützlich, wenn du mit vielen Dateien und Verzeichnissen arbeiten möchtest. Insbesondere die Funktion ``os.listdir()`` ist wichtig.
 
-To process bigger amounts of data, you will need to work on more than
-one file. Sometimes you don’t know all the files in advance.
-The ``os`` module is quite useful for working with many files and directories.
-
-Fill in the gaps:
-
-.. figure:: ../images/os.png
-   :alt: os exercise
-
-Exercise 10
------------
-
-Explain the following code:
+Erkläre den folgenden Code:
 
 .. code:: python3
 
    import os
-
+   
    for dirname in os.listdir(r"names/"):
        print(dirname)
 
-
-Recap: Read and write text files
+Aufgabe 9: Verzeichnis einlesen:
 --------------------------------
 
-Insert working code into the blanks:
+Rückblick: Textdateien lesen und schreiben
+------------------------------------------
+
+Füge funktionierenden Code in die Leerstellen ein:
 
 ::
 
-   # 1. Create a list with the numbers 1..7
+   # 1. Erstelle eine Liste mit den Zahlen 1..7
+   ...
+   
+   # 2. Wandle die Zahlen in Strings um
+   ...
+   
+   # 3. Öffne eine Datei zum Schreiben
+   ...
+   
+   # 4. Schreibe die Zahlen in die Datei
+   ...
+   
+   # 5. Öffne die Datei zum Lesen
+   ...
+   
+   # 6. Lese alle Zahlen in eine Liste
+   ...
+   
+   # 7. Summiere die Zahlen
    ...
 
-   # 2. Convert the numbers to a string
-   ...
+Reflexionsfragen
+----------------
 
-   # 3. Open a file for writing
-   ...
-
-   # 4. Write the numbers to the file
-   ...
-
-   # 5. Open the file for reading
-   ...
-
-   # 6. Read all numbers in a list
-   ...
-
-   # 7. Sum up the numbers
-   ...
-
-
-Reflection Questions
---------------------
-
--  How do you know that a file path in a program is wrong?
--  What do you need to check if a file path in a program is wrong?
--  How to print all file names in a folder?
+* Woran erkennst du, dass ein Dateipfad in einem Programm falsch ist?
+* Was musst du überprüfen, wenn ein Dateipfad in einem Programm nicht funktioniert?
+* Wie kann man alle Dateinamen in einem Ordner ausgeben?

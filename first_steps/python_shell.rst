@@ -130,7 +130,7 @@ Die erste Anweisung verändert den Inhalt einer Variablen aus Aufgabe 4. Setze W
    ___
 
    >>> obst = ___ + ___ + ___
-   >>>]: obst
+   >>> obst
    38
 
 .. hint::
@@ -182,5 +182,5 @@ Reflection Questions
 
 * Welche arithmetischen Operatoren kennt Python?
 * Was ist eine Variable?
-* Was tut der Operator `=`?
+* Was tut der Operator ``=`` ?
 * Wie kannst du den Wert zweier Variablen vertauschen?

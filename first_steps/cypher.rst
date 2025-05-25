@@ -1,4 +1,4 @@
-Cäsar-Chiffer
+Cäsar-Chiffre
 =============
 
 .. image:: enigma.jpg

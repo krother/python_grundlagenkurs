@@ -68,15 +68,15 @@ Erkläre den Unterchied zwischen folgenden Ausdrücken:
 
 .. code:: python3
 
-   [1, 2 + 3, 4]
+   >>> [1, 2 + 3, 4]
 
-   [1, 2] + [3, 4]
+   >>> [1, 2] + [3, 4]
 
-   ["1", "2" + "3", "4"]
+   >>> ["1", "2" + "3", "4"]
 
-   ["1, 2" + "3, 4"]
+   >>> ["1, 2" + "3, 4"]
 
-   "[1, 2" + "3, 4]"
+   >>> "[1, 2" + "3, 4]"
 
 
 Aufgabe 5: Puzzle
@@ -89,7 +89,7 @@ Verwende jeden Ausdruck genau ein Mal.
    :alt: list funcs Aufgabe2
 
 
-Aufgabe 6: Listen Transformieren
+Aufgabe 6: Listen transformieren
 --------------------------------
 
 Bisweilen ist es nützlich, eine Liste in eine neue umzuwandeln.

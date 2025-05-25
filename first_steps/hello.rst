@@ -9,7 +9,7 @@ In diesem Kapitel lernst du:
 Bereich Thema
 ======= ===============================================
 🚀      ein „Hello World“-Programm in Python schreiben
-💡      den Datentype *String* verwenden
+💡      den Datentyp *String* verwenden
 💡      die Funktionen `print()` und `input()` aufrufen
 ⚙       Text in einer String-Variablen speichern
 🔧      Befehle eingeben
@@ -67,7 +67,7 @@ Welche der folgenden `input`-Befehle funktionieren? Probiere sie nacheinander au
    
    name = input()
 
-Aufgabe 5: Variablennamen
+Aufgabe 4: Variablennamen
 -------------------------
 
 Probiere aus, welche der folgenden Variablennamen in Python verwendet werden können:
@@ -82,36 +82,36 @@ Probiere aus, welche der folgenden Variablennamen in Python verwendet werden kö
    
    2000imperator = 'sith'
    
-   obi\_wan\_kenobi = 'jedi'
+   obi_wan_kenobi = 'jedi'
    
    darth.maul = 'sith'
 
-Aufgabe 6: Three little bugs
-----------------------------
+Aufgabe 5: Drei Fehler
+----------------------
 
-Das folgende Programm soll ein Lied von Bob Marley ausgeben.
+Das folgende Programm soll eine Begrüßung ausgeben.
 Es enthält drei Fehler.
 Kopiere den Code in deinen Editor.
-Finde und behebe die Fehler.
+Dann finde und behebe die Fehler.
 
 .. code:: python3
 
-   part1 = "Don't worry about a thing"
-   part2 = "Cause every little thing"
-   part3 = gonna be all right
+   teil1 = "Herzlich willkommen,"
+   teil2 = "menschlicher Benutzer."
+   teil3 = ich wünsche dir viel Erfolg
 
-   text = "part1 + part2 + part3"
+   text = "teil1 + teil2 + teil3"
    print(text
 
-Aufgabe 7:
-----------
+Aufgabe 6: Begrüßungsprogramm
+-----------------------------
 
 Schreibe ein Programm, das nach deinem Vor- und Nachnamen fragt und beides ausgibt.
 
 Reflexionsfragen
 ----------------
 
-* Woran erkennt man eine Funktion?
-* Was kann man in die Klammern der `print()`-Funktion schreiben?
+* Woran erkennst du eine Funktion?
+* Was kannst du in die Klammern der ``print()``-Funktion schreiben?
 * Was für Variablennamen sind erlaubt/nicht erlaubt?
-* Was kann man tun, wenn das Programm nicht funktioniert?
+* Was kannst du tun, wenn das Programm nicht funktioniert?

@@ -1,5 +1,5 @@
-Quadratzahlen
-=============
+Liniendiagramme
+===============
 
 |image0|
 
@@ -12,11 +12,12 @@ In diesem Kapitel lernst du:
 ======= =================================
 Bereich Thema
 ======= =================================
-🚀      calculate square numbers
+🚀      Funktionen plotten
 ⚙       `for`-Schleifen verwenden
 ⚙       Anweisungen einrücken
 💡      Die Funktion `range()` verwenden
 💡      Das Modul `time` verwenden
+💡      Das Modul `math` verwenden
 🐞      Laufzeitfehler erkennen
 ======= =================================
 
@@ -56,57 +57,91 @@ Erkläre den Unterschied zwischen folgenden zwei Programmen:
 
 .. code:: python3
     
-    x = 1
+    y = []
     for i in range(10):
-        x = x * 2
-        print(x)
+        y.append(x * 2)
+        print(y)
 
 und
 
 .. code:: python3
     
-    x = 1
+    y = []
     for i in range(10):
-        x = x * 2
-    print(x)
+        y.append(x * 2)
+        print(y)
 
 
-Aufgabe 4: Quadrate
--------------------
+Aufgabe 4: Quadratzahlen
+------------------------
 
-Schreibe eine Schleife mit `for`, welche folgende Ausgabe produziert:
+Schreibe eine Schleife mit `for`, welche folgende Liste produziert und ausgibt:
 
 ::
 
-    1
-    4
-    9
-    16
-    25
-    36
-    49
+    [1, 4, 9 16, 25, 36, 49]
 
 
-Aufgabe 6: Sequenzen
---------------------
+Aufgabe 5: Mathematische Funktionen
+-----------------------------------
 
 Probiere folgende Schleifen aus.
 Erkläre was passiert.
 
 .. code:: python3
     
-    for buchstabe in "ABCD":
-        print(buchstabe)
+    import math
 
-    for i in range(10):
-        print(i)
+    for x in range(10):
+        print(x * 0.1)
 
-    for zahl in [4, 9, 16, 25]:
-        print(zahl)
+    for x in [4, 9, 16, 25]:
+        print(math.sqrt(x))
 
-    kaninchen = 10
-    for i in range(9):
-         kaninchen = kaninchen + kaninchen // 5
-         print(kaninchen)
+    for x in range(10):
+        y = 2 ** x
+        print(y)
 
-.. |image0| image:: squares.jpg
+    for x in range(0, 360, 30):
+        print(math.sin(math.radians(x))
+
+
+Aufgabe 6: Matplotlib
+---------------------
+
+Öffne ein Terminal. Gib folgende Zeile ein:
+
+::
+
+    pip install matplotlib
+
+Dann führe folgenden Code aus:
+
+.. code:: python3
+
+    from matplotlib import pyplot as plt
+
+    x = [1, 2, 3, 4, 5]
+    y = [10, 20, 50, 30, 70]
+
+    plt.plot(x, y)
+   plt.xlabel("x")
+   plt.ylabel("y")
+   plt.savefig("diagramm.png")
+    plt.show()    
+
+
+Aufgabe 7: Diagramme
+--------------------
+
+Schreibe ein Programm, das eine Parabel (:math:`x^2`) im Bereich von 1 bis 10 zeichnet.
+
+Probiere auch:
+
+- den Bereich auf -10 bis +10 zu erweitern
+- 100 Punkte zwischen 0 und 10 zu plotten
+- eine Exponentialfunktion
+- eine Sinusfunktion
+
+
+.. |image0| image:: parabola.png

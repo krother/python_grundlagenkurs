@@ -30,80 +30,34 @@ Erste Schritte
    first_steps/python_shell.rst
    first_steps/hello.rst
    first_steps/type_conversions.rst
-   first_steps/guess_the_number.rst
    first_steps/rock_paper_scissors.rst
-   first_steps/for.rst
-   first_steps/cypher.rst
+   first_steps/guess_the_number.rst
    first_steps/bill.rst
+   first_steps/for.rst
+   debugging/README.rst
    first_steps/dictionaries.md
    first_steps/indexing.rst
-   first_steps/nested_lists.rst
    first_steps/babynames.rst
+   first_steps/cypher.rst
+   first_steps/nested_lists.rst
    first_steps/statistics.rst
-   debugging/README.rst
-   refactoring/refactoring.rst
-
---------------
-
-Coding Challenges
------------------
-
-.. toctree:: 
-   :maxdepth: 1
-
-   challenges/pyramide.md
-   challenges/schachbrett.md
-   challenges/palindrome.md
-   challenges/anagramme.md
-   challenges/alaeddin.md
-   challenges/regex.md
-   challenges/roman.md
-   challenges/encrypt.md
-   challenges/pythagoras.md
-   challenges/fakultaet.md
-   challenges/fibonacci.md
-   challenges/querprodukt.md
-   challenges/ggt.md
-   challenges/geburtstage.md
-   challenges/fizzbuzz.md
-   challenges/sortieralgorithmen.md
-   challenges/josephus.md
-   challenges/tree_traversal.md
-   challenges/graph_traversal.md
-   challenges/magisches_quadrat.md
-   challenges/tsp.md
-   challenges/kings.md
-   challenges/backpack_problem.md
-   challenges/blockchain.md
-   challenges/text_adventure.rst
-
---------------
-
-Anhang
---------
-
-.. toctree:: 
-   :maxdepth: 1
-
+   challenges/README.rst
    links.md
 
 --------------
 
-.. topic:: Acknowledgements
+.. topic:: Autoren
 
-   I would like to thank the following people for inspiring exchange on
-   training and Python that this tutorial has benefited from: Pedro
-   Fernandes, Tomasz Puton,
+   Die folgenden Personen haben zur Entstehung dieses Tutorials beigetragen:
+   Allegra Via, Kaja Milanowska, Anna Philips, Pedro Fernandes, Tomasz Puton,
    Edward Jenkins, Bernard Szlachta, Robert Lehmann,
-   and Magdalena Rother
+   @ShalokShalom, @devSython.
+   und Magdalena Rother
 
 
 .. topic:: License
 
-   © 2023 Dr. Kristian Rother
-
-   with contributions by Allegra Via, Kaja Milanowska, Anna Philips,
-   @ShalokShalom and @devSython.
+   © 2025 Dr. Kristian Rother
    
    Usable under the conditions of the Creative Commons Attribution Share-alike License 4.0 (CC-BY-SA 4.0).
    See `creativecommons.org <https://creativecommons.org/licenses/by-sa/4.0/>`__ for details

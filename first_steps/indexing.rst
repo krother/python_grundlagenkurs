@@ -1,36 +1,35 @@
-
-Block Cipher
+Blockchiffre
 ============
 
-In this chapter you will:
--------------------------
+In diesem Kapitel lernst du:
+----------------------------
 
-======= ====================================
-area    topic
-======= ====================================
-🚀      implement a transposition cipher
-⚙       slice lists and strings
-💡      use the ``join`` method of the ``string`` data type
-🔀      use a loop variable for indexing
-🔀      use indexing to re-arrange a list
-======= ====================================
+======= ========================================================
+Bereich Thema
+======= ========================================================
+🚀       eine Transpositionschiffre implementieren  
+⚙        Listen und Zeichenketten per Slice aufteilen  
+💡       die ``join``-Methode des ``string``-Datentyps verwenden  
+🔀       eine Schleifenvariable zum Indexieren verwenden  
+🔀       über Indizes eine Liste neu anordnen  
+======= ========================================================
 
 
-Indexing and Slicing
---------------------
+Indexieren und Slicen
+---------------------
 
-Strings and lists are both ordered sequences of elements.
-In both, you can address elements by their position.
-However, Python is counting differently than humans:
+Strings und Listen sind beide geordnete Folgen von Elementen.  
+Bei beiden kannst du Elemente über ihre Position ansprechen.  
+Allerdings zählt Python anders als Menschen:
 
 .. figure:: indexing.png
-   :alt: Indexing
+   :alt: Indexierung
 
 
-Exercise 1: Indexing lists
---------------------------
+Aufgabe 1: Listen indexieren
+----------------------------
 
-What do the following expressions result in?
+Was ergibt jeder der folgenden Ausdrücke?
 
 .. code:: python3
 
@@ -42,10 +41,12 @@ What do the following expressions result in?
    numbers[-3]
 
 
-Exercise 2: Slicing strings
----------------------------
+Aufgabe 2: Zeichenketten slicen
+-------------------------------
 
-What do the following commands result in?
+Was ergibt jeder der folgenden Befehle?
+
+.. code:: python3
 
    name = "hello world"
 
@@ -55,10 +56,11 @@ What do the following commands result in?
    numbers[2:-2]
    numbers[::2]
 
-Exercise 3: Ranges
-------------------
 
-Use ``list(range())`` to create the following lists:
+Aufgabe 3: Serien
+-----------------
+
+Nutze ``list(range(start, stop, schrittweite))``, um folgende Listen zu erzeugen:
 
 .. code:: python3
 
@@ -69,80 +71,80 @@ Use ``list(range())`` to create the following lists:
    [33, 32, 31, 30]
 
 
-Exercise 4: Decypher
---------------------
+Aufgabe 4: Entschlüsseln
+-------------------------
 
-The following text contains an encrypted word:
+Der folgende Text enthält ein verschlüsseltes Wort:
 
 .. code:: python3
 
    name = "CSAIPRALKAINACZEYLVOST"
 
-Print every second character, starting with the 2nds.
+Gib jeden zweiten Buchstaben aus, beginnend mit dem zweiten.
 
 
-Exercise 5: Slicing puzzle
---------------------------
+Aufgabe 5: Slice-Rätsel
+------------------------
 
-Use the expressions to modify the list as indicated. Use each expression
-once.
+Nutze die Ausdrücke, um die Liste wie angegeben zu verändern.  
+Verwende jeden Ausdruck genau einmal.
 
 .. figure:: list_funcs1.png
-   :alt: list funcs exercise1
+   :alt: Listenfunktionen Übung 1
 
 
-Exercise 6: Blocks
-------------------
+Aufgabe 6: Blöcke
+-----------------
 
-The following code is creating the first two blocks for a `transposition cipher <https://en.wikipedia.org/wiki/Transposition_cipher>`__ .
-Complete the code by creating the other two blocks as well.
+Der folgende Code erzeugt die ersten zwei Blöcke für eine `Transpositionschiffre <https://de.wikipedia.org/wiki/Transpositionsverschl%C3%BCsselung>`__.  
+Vervollständige den Code, indem du auch die restlichen zwei Blöcke erzeugst.
 
 .. code:: python3
 
-   message = "MEETINGATDAWNATTHEBRIDGE"
+   nachricht = "TREFFENMORGENSVORBAHNHOF"
 
-   block1 = message[0::4]
-   block2 = message[1::4]
+   block1 = nachricht[0::4]
+   block2 = nachricht[1::4]
    ___
    ___
    encrypted = block1 + block2 + block3 + block4
 
 
-Exercise 7: Transposition Cipher
+Aufgabe 7: Transpositionschiffre
 --------------------------------
 
-Complete the program that encrypts a text using a transposition cipher:
+Vervollständige das Programm, das einen Text mit einer Transpositionschiffre verschlüsselt:
 
 .. code:: python3
 
-   message = input("enter the text to encrypt: ")
-   encrypted = ""
+   text = input("Gib den Text zum Verschlüsseln ein: ")
+   crypto = ""
    for start in range(4):
        ___
 
-Exercise 8: Decrypt
--------------------
 
-Write a program to decrypt an encrypted message again.
+Aufgabe 8: Entschlüsseln
+------------------------
 
-
-Exercise 9: Encryption Key
---------------------------
-
-Use an encryption key like ``2031`` that specifies a new order for the blocks.
-Implement the following:
-
-1. create an empty list
-2. create the blocks as above and add them to the list
-3. go through each position of the encryption key
-4. select the block with the index given by the digit from the key (convert it to int)
-5. add the block to the result string
+Schreibe ein Programm, das eine verschlüsselte Nachricht wieder entschlüsselt.
 
 
-Reflection questions
+Aufgabe 9: Schlüssel
 --------------------
 
-- what is indexing?
-- what do the three numbers in *slicing* do?
-- what do you think about the transposition cipher. Is it secure?
-- how could you decrypt a transposition cipher without the key?
+Nutze einen Schlüssel wie ``2031``, der eine neue Reihenfolge der vier Blöcke vorgibt. Implementiere folgendes:
+
+1. Erzeuge eine leere Liste  
+2. Erzeuge wie zuvor die vier Blöcke und füge sie der Liste hinzu  
+3. Gehe jede Stelle des Schlüssels durch  
+4. Wähle aus der Liste den Block mit dem Index entsprechend der Ziffer (in int umwandeln)  
+5. Füge den Block zum Ergebnisstring hinzu  
+
+
+Reflexionsfragen
+----------------
+
+- Was ist Indexierung?
+- Was bewirken die drei Zahlen beim *Slicing*?
+- Was hältst du von der Transpositionschiffre? Ist sie sicher?
+- Wie könnte man eine Transpositionschiffre ohne den Schlüssel entschlüsseln?
