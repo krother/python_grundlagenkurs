@@ -146,36 +146,6 @@ Erkläre den folgenden Code:
    for dirname in os.listdir(r"names/"):
        print(dirname)
 
-Aufgabe 9: Verzeichnis einlesen:
---------------------------------
-
-Rückblick: Textdateien lesen und schreiben
-------------------------------------------
-
-Füge funktionierenden Code in die Leerstellen ein:
-
-::
-
-   # 1. Erstelle eine Liste mit den Zahlen 1..7
-   ...
-   
-   # 2. Wandle die Zahlen in Strings um
-   ...
-   
-   # 3. Öffne eine Datei zum Schreiben
-   ...
-   
-   # 4. Schreibe die Zahlen in die Datei
-   ...
-   
-   # 5. Öffne die Datei zum Lesen
-   ...
-   
-   # 6. Lese alle Zahlen in eine Liste
-   ...
-   
-   # 7. Summiere die Zahlen
-   ...
 
 Reflexionsfragen
 ----------------

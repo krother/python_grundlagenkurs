@@ -1,13 +1,13 @@
 
-# Die Suche nach dem Drachenei
+Die Suche nach dem Drachenei
+============================
 
 **🎯 Programmiere ein einfaches Textadventure.**
 
-----
+Die Story
+=========
 
-## Die Story
-
-![](../images/drachenei.png)
+.. figure:: ../images/drachenei.png
 
 Weit, weit, hinter unzugänglichen Landschaften verborgen, liegt ein geheimnisvolles Drachenei. Schaffst du es, das Drachenei zum Leben zu erwecken?
 
@@ -18,11 +18,10 @@ Weit, weit, hinter unzugänglichen Landschaften verborgen, liegt ein geheimnisvo
 * im Wald lebt ein Bär, der niemanden durchlässt
 * der Bär mag Honig, den es beim Imker gibt
 
-Wenn dir eine bessere Handlung einfällt, programmiere sie!
-
 ----
 
-## Anforderungen
+Anforderungen
+-------------
 
 Schreibe ein Spiel, in dem du dich zwischen abgegrenzten Räumen hin- und herbewegen kannst.
 
@@ -36,9 +35,11 @@ Das Spiel ist vollständig textbasiert.
 
 ----
 
-## Beispielausgabe
+Beispielausgabe
+---------------
 
-    :::text
+::
+
     Finde das Drachenei
     ===================
 
@@ -63,22 +64,25 @@ Das Spiel ist vollständig textbasiert.
 
 ----
 
-## Schritt für Schritt
+Schritt für Schritt
+-------------------
 
-### Schritt 1: Lege ein neues Projekt an
+Schritt 1: Lege ein neues Projekt an
+++++++++++++++++++++++++++++++++++++
 
 * Erstelle einen Ordner für das Projekt
 * Erstelle eine Python-Datei `abenteuer.py`
 * Öffne die Datei in einem Editor
 
-----
 
-### Schritt 2: Das Grundgerüst
+Schritt 2: Das Grundgerüst
+++++++++++++++++++++++++++
 
 Schreibe in das Programm eine Willkommensnachricht.
 Hierfür eignet sich eine mehrzeilige Ausgabe:
 
-    :::python3
+.. code:: python3
+
     print("""
     Finde das Drachenei
     ===================
@@ -88,7 +92,8 @@ Hierfür eignet sich eine mehrzeilige Ausgabe:
 
 Gib am Ende eine Erfolgsmeldung aus:
 
-    :::python3
+.. code:: python3
+
     print("""
     Auf einer verborgenen Lichtung entdeckst Du das Drachenei.
 
@@ -101,7 +106,8 @@ Weiteren Code wirst Du später zwischen diesen beiden Anweisungen einsetzen.
 
 ----
 
-### Schritt 3: Die Hauptschleife
+Schritt 3: Die Hauptschleife
+++++++++++++++++++++++++++++
 
 Das wichtigste Strukturelement bei den meisten Spielen ist die Hauptschleife.
 In jedem Schleifendurchlauf kannst du einen Befehl eingeben.
@@ -109,18 +115,20 @@ Das Spiel soll enden, sobald der Zielort erreicht ist.
 
 Es steht allerdings nicht im Voraus fest, wie viele Befehle lang das Spiel dauert.
 Also ist die Anzahl Schleifendurchläufe unbekannt.
-Für eine unbekannte Anzahl Wiederholungen eignet sich die `while`-Schleife.
+Für eine unbekannte Anzahl Wiederholungen eignet sich die ``while``-Schleife.
 
 Definiere zuerst eine Zustandsvariable, die den aktuellen Raum enthält.
 In Python verwenden wir den Namen des Raumes direkt:
 
-    :::python3
+.. code:: python3
+
     raum = "Heimatstadt"
 
-Sobald du den Raum *"Drachenei"* erreichtst, endet das Spiel.
+Sobald du den Raum *"Lichtung"* erreichtst, endet das Spiel.
 Du kannst dies direkt in der `while`-Schleife umsetzen:
 
-    :::python3
+.. code:: python3
+
     while raum != "Lichtung":
         print(f"Du befindest dich in {raum}")
         raum = input("Wohin möchtest Du gehen? ")
@@ -131,7 +139,8 @@ Die `input()`-Anweisung ist ein Platzhalter, damit das Programm nicht in einer E
 
 ----
 
-### Schritt 4: Räume
+Schritt 4: Räume
+++++++++++++++++
 
 Im Spiel gibt es noch keine Räume.
 Du siehst also nicht, wo du dich befindest.
@@ -139,7 +148,8 @@ Du siehst also nicht, wo du dich befindest.
 Gib stimmungsvolle Beschreibungstexte zu einigen Räumen aus.
 Füge `if`-Anweisungen wie folgende zur Hauptschleife hinzu:
 
-    :::python3
+.. code:: python3
+
     if raum == "Heimatstadt":
         print("""
         Du befindest Dich in Deiner Heimatstadt.
@@ -152,7 +162,8 @@ Diese `if`-Blöcke ersetzen die `print()`-Anweisung aus dem vorigen Schritt.
 
 ----
 
-### Schritt 5: Eine Datenstruktur
+Schritt 5: Eine Datenstruktur
++++++++++++++++++++++++++++++
 
 Jeden Raum mit `if` einzeln abzufragen, mag bei 4 Räumen ja noch angehen
 Stelle dir vor, das Spiel hätte stattdessen 100 Räume.
@@ -160,10 +171,12 @@ Das Programm würde schnell unübersichtlich.
 
 Eine bessere Alternative ist, die **Daten zu strukturieren**. Dazu verwenden wir ein **Dictionary**, das die Beschreibungen aller Räume enthält:
 
-    :::python3
+.. code:: python3
+
     beschreibungen = {
-        "Heimatstadt": """Du befindest Dich in Deiner Heimatstadt...""",
-        "Eiswüste": """...""",
+        "Heimatstadt": """Du befindest Dich in Deiner Heimatstadt.""",
+        "Lichtung": """Auf einer Lichtung glänzt das Drachenei.""",
+        ...
     }
 
 Definiere dieses Dictionary am Anfang des Programms.
@@ -171,7 +184,8 @@ Nun kannst du alle `if`-Anweisungen durch einen einzigen Zugriff auf das Diction
 Als Schlüssel dient die Variable `raum`.
 Schreibe innerhalb der `while`-Schleife:
 
-    :::python3
+.. code:: python3
+
     print(beschreibungen[raum])
 
 Und wirf die `if`-Anweisungen aus Schritt 4 weg.
@@ -180,14 +194,16 @@ Und wirf die `if`-Anweisungen aus Schritt 4 weg.
 
 ----
 
-### Schritt 6: Plausibilitätskontrolle
+Schritt 6: Plausibilitätskontrolle
+++++++++++++++++++++++++++++++++++
 
 Bisher prüft das Programm nicht, ob es einen Raum auch tatsächlich gibt.
 Wenn Du also einen falschen Raum eingibst (oder Dich vertippst), bricht das Programm mit einer Fehlermeldung ab.
 Führe eine Kontrolle der Eingabe durch, um das zu unterbinden.
 Verwende folgenden Code, der die Eingabe mit den Schlüsseln des Beschreibungs-Dictionaries vergleicht:
 
-    :::python3
+.. code:: python3
+
     ziel = input("Wohin möchtest Du gehen? ")
     if ziel in beschreibungen:
         raum = ziel
@@ -200,7 +216,8 @@ Finde heraus, an welcher Stelle des Programms diese Zeile eingesetzt werden muss
 
 ----
 
-### Schritt 7: Pfade
+Schritt 7: Pfade
+++++++++++++++++
 
 Im Moment kannst du dich von jedem Raum zu jedem anderen teleportieren.
 Das ist etwas witzlos. Erstens nicht klar ist welche Räume es überhaupt gibt.
@@ -210,7 +227,8 @@ Etwas spannender wird es, wenn du bestimmte Räume miteinander verbindest.
 Dazu brauchen wir eine zweite Datenstruktur, auch diesmal ein Dictionary.
 Jeder Eintrag zeigt von einem Startraum zu einem oder mehreren Zielräumen:
 
-    :::python3
+.. code:: python3
+
     pfade = {
         "Heimatstadt": ["Wüste", "Wald"],
         "Wald": ["Heimatstadt", "Eiswüste"],
@@ -222,17 +240,20 @@ Lässt du einen weg, kannst du auch *Einbahnstrassen* erstellen.
 
 Die Pfade für den aktuellen Raum kannst du mit folgender Zeile anzeigen:
 
-    :::python3
+.. code:: python3
+
     print(pfade[raum])
 
 oder etwas eleganter mit:
 
-    :::python3
+.. code:: python3
+
     print(", ".join(pfade[raum]))
 
 Möchtest du auch die Plausibilitätskontrolle erweitern, so dass nur die aktuellen Pfade begehbar sind, benötigst du folgende Zeile:
 
-    :::python3
+.. code:: python3
+
     if ziel in pfade[raum]:
         ...
 
@@ -240,12 +261,14 @@ Möchtest du auch die Plausibilitätskontrolle erweitern, so dass nur die aktuel
 
 ----
 
-### Schritt 8: Zustände
+Schritt 8: Zustände
++++++++++++++++++++
 
 Ein spannedes Adventure sollte einige Puzzles enthalten.
 Ein Puzzle könnte so aussehen:
 
-    :::text
+::
+    
     Wohin möchtest Du gehen? Wald
 
     Im Wald ist ein Bär!!! Hier kannst Du nicht hin.
@@ -266,19 +289,22 @@ Wie kannst du ein Puzzle programmieren?
 
 Erstens brauchst du eine **Zustandsvariable**, die du **vor der Hauptschleife** definierst, z.B.:
 
-    :::python3
+.. code:: python3
+
     honig = False
 
 Zweitens musst du **in der Hauptschleife** abfragen, ob sich der Zustand ändert, z.B.:
 
-    :::python3
+.. code:: python3
+
     if raum == "Imkerei" and not honig:
         print("Beim Imker kaufst Du einen Topf Honig.")
         honig = True
 
 Drittens musst du den Zustand **in der Hauptschleife** auswerten, um Aktionen zu ermöglichen oder zu blocken:
 
-    :::python3
+.. code:: python3
+
     if ziel == "Wald":
         if honig:
             print("Du gibst dem Bären den Honig und er zieht zufrieden schleckend davon.")
@@ -289,9 +315,15 @@ Drittens musst du den Zustand **in der Hauptschleife** auswerten, um Aktionen zu
 
 ----
 
-### Schlussbemerkung
+Schlussbemerkung
+++++++++++++++++
 
 Alle diese Anweisungen in der richtigen Reihenfolge einzusetzen ist nicht ganz einfach.
 Am besten probierst du das Programm nach jeder Änderung aus und schaust was passiert.
 
 Bestimmt hast du noch viele Ideen, was in deinem Abenteuer passieren kann.
+
+.. note::
+
+   Die Handlung ist zugegeben nicht die originellste.
+   Wenn dir eine bessere einfällt, programmiere sie!

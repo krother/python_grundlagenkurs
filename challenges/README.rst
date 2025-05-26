@@ -29,4 +29,5 @@ Coding Challenges
    kings.md
    backpack_problem.md
    blockchain.md
-   text_adventure.rst
+   bvg/README.rst
+   textadventure.rst

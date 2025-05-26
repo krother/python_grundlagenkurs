@@ -1,8 +1,3 @@
-"""
-Namen von Stationen vom BVG-Server ermitteln:
-https://v6.bvg.transport.rest/
-"""
-
 from pprint import pprint
 
 import httpx
