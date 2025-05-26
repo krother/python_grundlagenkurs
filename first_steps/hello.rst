@@ -46,9 +46,6 @@ Probiere die folgenden fehlerhaften Programme nacheinander aus und versuche die 
    
    name = input("Wie heißt du? ")
    print(Hello , name)
-   
-   x = input("Wie heißt du? ")
-   print("Hallo", x)
 
 Wie kannst du herausfinden, was passiert ist?
 

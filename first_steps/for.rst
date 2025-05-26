@@ -58,7 +58,7 @@ Erkläre den Unterschied zwischen folgenden zwei Programmen:
 .. code:: python3
     
     y = []
-    for i in range(10):
+    for x in range(10):
         y.append(x * 2)
         print(y)
 
@@ -67,9 +67,9 @@ und
 .. code:: python3
     
     y = []
-    for i in range(10):
+    for x in range(10):
         y.append(x * 2)
-        print(y)
+    print(y)
 
 
 Aufgabe 4: Quadratzahlen
@@ -103,7 +103,7 @@ Erkläre was passiert.
         print(y)
 
     for x in range(0, 360, 30):
-        print(math.sin(math.radians(x))
+        print(math.sin(math.radians(x)))
 
 
 Aufgabe 6: Matplotlib
@@ -125,9 +125,9 @@ Dann führe folgenden Code aus:
     y = [10, 20, 50, 30, 70]
 
     plt.plot(x, y)
-   plt.xlabel("x")
-   plt.ylabel("y")
-   plt.savefig("diagramm.png")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.savefig("diagramm.png")
     plt.show()    
 
 
