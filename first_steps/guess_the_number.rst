@@ -92,9 +92,9 @@ Das folgende Programm verwendet eine **Zählvariable** und ein **Zwischenergebni
 
    ergebnis = ""
    durchlauf = 1
-       while durchlauf < 10:
-           ergebnis = ergebnis + str(durchlauf)
-           durchlauf = durchlauf + 1
+   while durchlauf < 10:
+       ergebnis = ergebnis + str(durchlauf)
+       durchlauf = durchlauf + 1
    print(ergebnis)
 
 Ändere das Programm, so dass es folgendes:

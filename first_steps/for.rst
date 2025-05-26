@@ -79,7 +79,7 @@ Schreibe eine Schleife mit `for`, welche folgende Liste produziert und ausgibt:
 
 ::
 
-    [1, 4, 9 16, 25, 36, 49]
+    [1, 4, 9, 16, 25, 36, 49]
 
 
 Aufgabe 5: Mathematische Funktionen
