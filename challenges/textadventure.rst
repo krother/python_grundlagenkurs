@@ -5,7 +5,7 @@ Die Suche nach dem Drachenei
 **🎯 Programmiere ein einfaches Textadventure.**
 
 Die Story
-=========
+---------
 
 .. figure:: ../images/drachenei.png
 

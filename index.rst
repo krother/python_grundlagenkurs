@@ -41,8 +41,9 @@ Erste Schritte
    first_steps/cypher.rst
    first_steps/nested_lists.rst
    first_steps/statistics.rst
+   datenanalyse/README.rst
    challenges/README.rst
-   links.md
+   appendix/links.md
 
 --------------
 
