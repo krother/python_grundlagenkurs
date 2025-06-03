@@ -9,7 +9,7 @@ Dazu werden wir die berühmte Animation von **Hans Rosling** nachstellen (siehe 
 Schritt 1
 ---------
 
-Lade die Datei :download:`daten/demographie.csv` in pandas.
+Lade die Datei :download:`demographie.csv` in pandas.
 
 .. code:: python3
 
@@ -17,7 +17,7 @@ Lade die Datei :download:`daten/demographie.csv` in pandas.
     import seaborn as sns
     from matplotlib import pyplot as plt
 
-    fert = pd.read_csv('gapminder_total_fertility.csv')
+    df = pd.read_csv('demographie.csv')
 
 Inspiziere die Daten.
 
@@ -28,7 +28,7 @@ Erstelle einen Scatterplot, z.B.:
 
 .. code:: python3
 
-   sns.scatterplot(data=d, x="fruchtbarkeit", y="lebenserwartung", 
+   sns.scatterplot(data=df, x="fruchtbarkeit", y="lebenserwartung", 
                    hue="land", legend=False)
 
 
@@ -39,7 +39,7 @@ Wähle einen Teildatensatz aus, z.B.:
 
 .. code:: python3
 
-    de = df[df["land"] == "Germany"]
+    deutschland = df[df["land"] == "Germany"]
 
 Plotte die Daten erneut.
 
@@ -94,7 +94,7 @@ Passe das folgende Skript an und führe es aus:
     images = []
 
     for i in range(0, 100):
-        filename = f'plot_{}.png'
+        filename = f'plot_{i:03d}.png'
         images.append(imageio.imread(filename))
 
     imageio.mimsave('output.gif', images, fps=20)

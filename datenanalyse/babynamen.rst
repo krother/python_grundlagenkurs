@@ -22,7 +22,7 @@ Lies die Datei **'yob2000.txt'** mit pandas ein:
 
    import pandas as pd
 
-   df = pd.read_csv("yob2000.txt", columns=["name", "geschlect", "anzahl"])
+   df = pd.read_csv("yob2000.txt", columns=["name", "geschlecht", "anzahl"])
 
 Aufgabe 2
 ---------
