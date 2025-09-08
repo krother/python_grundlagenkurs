@@ -22,6 +22,7 @@ Coding Challenges
    fizzbuzz.md
    sortieralgorithmen.md
    josephus.md
+   substitution.rst
    tree_traversal.md
    graph_traversal.md
    magisches_quadrat.md
