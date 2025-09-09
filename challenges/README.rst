@@ -31,3 +31,4 @@ Coding Challenges
    blockchain.md
    bvg/README.rst
    textadventure.rst
+   web_interface/README.rst
