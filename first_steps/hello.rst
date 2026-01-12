@@ -20,14 +20,15 @@ Bereich Thema
 Aufgabe 1: Dein erstes Programm
 -------------------------------
 
-Erstelle eine neue Datei im **Editor-Fenster** und gib folgende Anweisungen ein:
+Erstelle eine neue Datei im **Editor-Fenster**. Speicher sie unter dem Namen ``hello.py``.
+Gib folgende Anweisungen ein:
 
 .. code:: python3
 
    name = input("Wie heißt du? ")
    print("Hallo", name)
 
-Führe das Programm aus, indem du auf den **„Ausführen“**-Knopf rechts oben klickst. Was passiert?
+Führe das Programm aus, indem du auf den dreieckigen **„Ausführen“**-Knopf rechts oben klickst. Was passiert?
 
 Aufgabe 2: Mache das Programm kaputt!
 -------------------------------------

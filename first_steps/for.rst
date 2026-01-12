@@ -1,7 +1,7 @@
 Liniendiagramme
 ===============
 
-|image0|
+.. figure:: parabola.png
 
 `Bild von travelnow.or.crylater auf
 Unsplash <https://unsplash.com/@travelnow_or_crylater?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText>`__
@@ -113,7 +113,7 @@ Aufgabe 6: Matplotlib
 
 ::
 
-    pip install matplotlib
+    python -m pip install matplotlib
 
 Dann führe folgenden Code aus:
 
@@ -128,8 +128,8 @@ Dann führe folgenden Code aus:
     plt.xlabel("x")
     plt.ylabel("y")
     plt.savefig("diagramm.png")
-    plt.show()    
 
+Es sollte eine Datei ``diagramm.png`` im gleichen Ordner wie das Programm entstehen.
 
 Aufgabe 7: Diagramme
 --------------------
@@ -143,5 +143,3 @@ Probiere auch:
 - eine Exponentialfunktion
 - eine Sinusfunktion
 
-
-.. |image0| image:: parabola.png

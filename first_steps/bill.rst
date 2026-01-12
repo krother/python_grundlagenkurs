@@ -137,3 +137,4 @@ Reflexionsfragen
 -  Wie kannst du eine Liste erstellen?
 -  Wie kannst du Elemente zu einer Liste hinzufügen?
 -  Wie kannst du eine `for`-Schleife über eine Liste laufen lassen?
+-  Was ist der Unterschied zwischen einer `for`- und einer `while`-Schleife?

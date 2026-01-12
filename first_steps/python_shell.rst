@@ -26,7 +26,7 @@ Arithmetics
 -----------
 
 In diesem Kapitel werden wir die Python-Kommandozeile als Taschenrechner verwenden.
-Öffne ein Terminal und gib ein:
+Öffne ein Terminal (in VSCode unter ``View -> Terminal`` ) und gib ein:
 
 :: 
 
@@ -81,7 +81,7 @@ Was ist der Unterschied zwischen folgenden Anweisungen?
    >>> 10 // 4
    >>> 10 * 0.25
 
-Gib sie in der Konsole ein und untersuche das Ergebnis.
+Gib die Befehle in der Konsole ein und untersuche das Ergebnis.
 
 Aufgabe 3: Operatoren
 ---------------------
@@ -145,10 +145,10 @@ Welche Zuweisungen an Variablen sind korrekt?
 
 .. code:: python3
 
-   a = 1 * 2
-   2 = 1 + 1
-   5 + 6 = y
-   sieben = 3 * 4
+   >>> a = 1 * 2
+   >>> 2 = 1 + 1
+   >>> 5 + 6 = y
+   >>> sieben = 3 * 4
 
 
 Aufgabe 7: Kaninchen-Multiplikation
@@ -165,9 +165,9 @@ Jeden Monat kommen 20% neue Kaninchen dazu, so dass Du im Mai schon 12 hast.
 
 **Wie viele Kaninchen sind es im Dezember?**
 
-Es sterben keine Kaninchen.
 Rechne mit ganzen Zahlen oder Kommazahlen.
-Verwende Python um die Aufgabe zu lösen.
+Gehe davon aus, dass die Kaninchen unsterblich sind.
+Verwende Python, um die Aufgabe zu lösen.
 
 
 .. hint::
@@ -177,10 +177,11 @@ Verwende Python um die Aufgabe zu lösen.
 .. |image0| image:: calculator.png
 
 
-Reflection Questions
---------------------
+Reflexionsfragen
+----------------
 
 * Welche arithmetischen Operatoren kennt Python?
 * Was ist eine Variable?
 * Was tut der Operator ``=`` ?
+* Wie kannst du den Inhalt einer Variablen überprüfen?
 * Wie kannst du den Wert zweier Variablen vertauschen?

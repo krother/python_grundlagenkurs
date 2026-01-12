@@ -86,7 +86,7 @@ Aufgabe 4: Wiederholung
 -----------------------
 
 Mit einer Schleife kannst Du Vorgänge **wiederholen**. Dabei kann ein Schleifendurchlauf das Ergebnis des vorherigen verwenden.
-Das folgende Programm verwendet eine **Zählvariable** und ein **Zwischenergebnis**, um Ziffern auszugeben:
+Das folgende Programm verwendet eine **Zählvariable** (``durchlauf``) und ein **Zwischenergebnis** (``ergebnis``), um Ziffern auszugeben:
 
 .. code:: python3
 

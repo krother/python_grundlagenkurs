@@ -1,8 +1,6 @@
 Python installieren
 ===================
 
-.. figure:: ../images/schlangen.jpg
-
 In diesem Kapitel lernst Du:
 ----------------------------
 
@@ -61,7 +59,6 @@ Visual Studio Code ist ein leichtgewichtiger, aber leistungsstarker Editor mit U
 Wenn Python korrekt erkannt wurde, sollte eine Python-Version (z. B. 3.13.3) unten rechts im Fenster angezeigt werden. Eventuell mußt du auf das Feld rechts unten klicken, um die Python-Version auszuwählen. VS Code sollte das installierte Python selbst finden.
 
 .. figure:: vscode.png
-   :caption: Visual Studio Code
 
 Python in VS Code testen
 ++++++++++++++++++++++++
