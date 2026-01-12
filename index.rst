@@ -1,6 +1,9 @@
 Python Grundlagenkurs
 =====================
 
+
+.. figure:: images/schlangen.jpg
+
 Hier findest du Übungen für Python-Einsteiger.
 Ich habe sie für Kursteilnehmer geschrieben,
 aber auch für Selbstlerner und andere Trainer und Dozenten.
