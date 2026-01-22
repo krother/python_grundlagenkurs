@@ -34,12 +34,12 @@ Erste Schritte
    first_steps/hello.rst
    first_steps/type_conversions.rst
    first_steps/rock_paper_scissors.rst
-   first_steps/guess_the_number.rst
    first_steps/bill.rst
    first_steps/for.rst
    debugging/README.rst
    first_steps/dictionaries.md
    first_steps/indexing.rst
+   first_steps/guess_the_number.rst
    first_steps/babynames.rst
    first_steps/cypher.rst
    first_steps/nested_lists.rst

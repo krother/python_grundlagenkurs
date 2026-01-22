@@ -129,6 +129,15 @@ Die Ausgabe des Programms könnte so aussehen:
 .. hint::
 
    Zum Eingeben der Werte benötigst du eine ``while``-Schleife.
+   Du kannst folgenden Code verwenden:
+
+   .. code::
+
+      werte = []
+      zahl = "dummy"
+      while zahl != "":   # bricht ab wenn nichts eingegeben wurde
+          zahl = input(...)
+          ... 
 
 
 Reflexionsfragen

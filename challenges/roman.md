@@ -1,21 +1,21 @@
 
-# Römische Zahlen
+# Arabische Zahlen
 
-**🎯 Schreibe eine Funktion `roman2arabic()`, die eine römische in eine arabische Zahl umwandelt.**
+**🎯 Schreibe eine Funktion `arabic2roman()`, die eine arabische in eine römische Zahl umwandelt.**
 
 ## Tests
 
 Der folgende Code hilft beim Prüfen der Ergebnisse:
 
-    def test_roman(self):
-        assert roman2arabic("I") == 1
-        assert roman2arabic("XI") == 11
-        assert roman2arabic("IX") == 9
-        assert roman2arabic("CLI") == 151
-        assert roman2arabic("XCIII") == 93
-        assert roman2arabic("CCXCIV") == 294
-        assert roman2arabic("MCM") == 1900
-        assert roman2arabic("MI") == 1001
+    def test_arabic(self):
+        assert arabic2roman(1) == "I"
+        assert arabic2roman(11) == "XI"
+        assert arabic2roman(9) == "IX"
+        assert arabic2roman(151) == "CLI"
+        assert arabic2roman(93) == "XCIII"
+        assert arabic2roman(294) == "CCXCIV"
+        assert arabic2roman(1900) == "MCM"
+        assert arabic2roman(1001) == "MI"
 
 ## Hinweise
 
@@ -24,4 +24,5 @@ Der folgende Code hilft beim Prüfen der Ergebnisse:
 
 ## Zusatzaufgabe
 
-* schreibe eine Funktion, die arabische Zahlen in römische umwandelt
+* schreibe eine Funktion, die römische Zahlen in arabische umwandelt
+* verwende die Umkehrfunktion zum Testen
