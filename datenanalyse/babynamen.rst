@@ -9,20 +9,24 @@ Aus Datenschutzgründen sind nur Namen, die mindestens 5 Mal verwendet wurden, i
 Vorbereitungen
 --------------
 
-Lade den Datensatz der U.S.-Babynamen von [www.ssa.gov/oact/babynames/limits.html](https://www.ssa.gov/oact/babynames/limits.html) herunter (die nationalen Daten).
+Lade den Datensatz der U.S.-Babynamen von `www.ssa.gov/oact/babynames/limits.html <https://www.ssa.gov/oact/babynames/limits.html>`__ herunter (die nationalen Daten).
 
-Entpacke die Datei
+Entpacke die Datei.
 
 Aufgabe 1
 ---------
 
-Lies die Datei **'yob2000.txt'** mit pandas ein:
+Lies die Datei **'yob2000.txt'** mit `polars`pandas ein:
 
 .. code:: python3
 
-   import pandas as pd
+   import polars as pl
 
-   df = pd.read_csv("yob2000.txt", columns=["name", "geschlecht", "anzahl"])
+   df = pl.read_csv("babynames/yob2000.txt",
+                    has_header=False,
+                    new_columns=["name", "geschlecht", "anzahl"]
+                    )
+
 
 Aufgabe 2
 ---------
@@ -43,7 +47,7 @@ und
 Aufgabe 3
 ---------
 
-Berechne die Summe der dritten Spalte:
+Berechne die Anzahl Geburten insgesamt:
 
 .. code:: python3
 
@@ -69,7 +73,7 @@ Wähle die Mädchennamen aus:
 
 .. code:: python3
 
-   f = df[df["geschlecht"] == "F"]
+   f = df.filter(geschlecht="F")
 
 Untersuche diese Teilmenge wie in Aufgabe 3.
 
@@ -94,11 +98,17 @@ Finde einen bestimmten Namen in der Tabelle, z.B. deinen eigenen.
 Aufgabe 8
 ---------
 
+Erstelle eine neue Spalte mit dem Jahr:
+
+.. code:: python3
+
+   df = df.with_columns(jahr=2000)
+
 Erstelle eine neue Spalte mit dem prozentualen Anteil für jeden Namen:
 
 .. code:: python3
 
-   df["prozent"] = 100 * df["anzahl] / df["anzahl"].sum()
+   df = df.with_columns(perc = 100 * df["anzahl"] / df["anzahl"].sum())
 
 Sichte das Ergebnis.
 
@@ -111,19 +121,22 @@ Hier ist ein Stück Code, der alle Jahrgänge einliest:
 .. code:: python3
 
    import os
-   import pandas as pd
 
    daten = []
    pfad = "daten/"
    for fn in os.listdir(pfad):
        if fn.startswith("yob"):
-           df = pd.read_csv(pfad + fn, columns=["name", "geschlect", "anzahl"])
-           df["jahr"] = int(fn[3:7])
+           df = pd.read_csv(columns=["name", "geschlect", "anzahl"])
+           df = pl.read_csv(pfad + fn,
+                    has_header=False,
+                    new_columns=["name", "geschlecht", "anzahl"]
+                    )
+           df = df.with_columns(jahr=int(fn[3:7]))
            daten.append(df)
-   df = pd.concat(daten)
+   df = pl.concat(daten)
 
 Du solltest eine riesige Tabelle mit den Daten aller Jahrgänge erhalten.
-Prüfe die Anzahl Zeilen und Spalten mit ``df.shape``. Es sollten vier Spalten und über 1 Mio Zeilen sein.
+Prüfe die Anzahl Zeilen und Spalten mit ``df.shape``. Es sollten vier Spalten und über 2 Mio Zeilen sein.
 
 Aufgabe 11
 ----------
@@ -144,34 +157,40 @@ Luke            Jedi
 Frida           Malerin, Biographie als Broadway-Musical
 Arielle         Meerjungfrau, Biographie von Walt Disney verfilmt
 Harley          Motorrad
+Khaleesi        Berufsbezeichnung bei "Game of Thrones"
 Wednesday       Wochentag
 ============== =========================================
 
 Du kannst einen Teildatensatz mit folgenden Zeilen plotten.
-Dazu sollte nur ein Name und ein Geschlecht vorliegen.
+Filtere dazu nach Name und ein Geschlecht.
 
 .. code:: python3
 
-   s = df.set_index("jahr")
-   s["anzahl"].plot()
-
+   promi = df.filter(...)
+   sns.lineplot(promi, x="jahr", y="anzahl")
 
 Aufgabe 12
 ----------
 
-Hier sind einige weitere Ideen:
+Hier sind einige weitere Ideen.
+Du kannst mit den zusätzlichen Spalten weitere Pivot-Tabellen generieren.
 
 Der Anfangsbuchstabe als Spalte:
 ++++++++++++++++++++++++++++++++
 
 .. code:: python3
 
-   df["erster"] = df["name"].str[0]
-
+   dd = dd.with_columns(first=dd["name"].str.slice(0, 1))
+   
 Länge des Namens
 ++++++++++++++++
 
 .. code:: python3
 
-   df["laenge"] = df["name"].length
+   dd = dd.with_columns(length=dd["name"].str.len_chars())
+   
+Hier ist ein Beispiel für eine Längenstatistik:
 
+.. code:: python3
+
+   lengthstat = dd.pivot(on="geschlecht", index="length", values="anzahl", aggregate_function="len")

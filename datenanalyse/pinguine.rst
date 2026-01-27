@@ -13,29 +13,33 @@ Installiere einige Bibliotheken:
 
 ::
 
-    pip install pandas seaborn
-    pip install openpyxl
+    pip install polars seaborn
+    pip install fastexcel xlsxwriter
     pip install jupyter
+    pip install pyarrow
 
 Starte nun die interaktive Jupyter-Umgebung. Diese eignet sich für die Datenanalyse deutlich besser als ``.py``-Dateien.
+Gib dazu im Terminal ein:
 
 ::
 
     jupyter notebook
 
+Es sollte ein Browser-Fenster aufgehen.
 Erstelle ein neues Notebook mit dem Knopf **New -> Python3**
 
 Aufgabe 2: Der Pinguin-Datensatz
 --------------------------------
 
+Lade nun einen Datensatz über Pinguine aus der CSV-Datei :download:`penguins.csv`.
 Füge folgenden Code in die oberste Zelle ein. Verwende den **Ausführen**-Knopf oder **Umschalt+Enter**:
 
 .. code:: python3
 
    import seaborn as sns
-   import pandas as pd
+   import polars as pl
 
-   df = sns.load_dataset("penguins")
+   df = pl.read_csv("penguins.csv")
    df
 
 Du solltest einen Auszug aus der Tabelle sehen.
@@ -43,13 +47,12 @@ Du solltest einen Auszug aus der Tabelle sehen.
 Aufgabe 3: Dateninspektion
 --------------------------
 
-Probiere folgende Befehle einzeln:
+Probiere folgende Befehle *einzeln*:
 
 .. code:: python3
 
    df.head()
    df.shape
-   df.info()
 
 Aufgabe 4: Speichern
 --------------------
@@ -58,11 +61,17 @@ Speichere die Daten wieder ab:
 
 .. code:: python3
 
-   df.to_csv("pinguine.csv")
-   df.to_excel("pinguine.xlsx") 
+   df.write_csv("pingus.csv")
+   df.write_excel("pingus.xlsx") 
 
 Aufgabe 5: Kategorien auszählen
 -------------------------------
+
+Eine Spalte enthält die Spezies der Pinguine, eine kategorische Variable:
+
+.. code:: python3
+
+   df["species"]
 
 Schaue nach wie viele Pinguine jeder Art es im Datensatz gibt:
 
@@ -70,31 +79,41 @@ Schaue nach wie viele Pinguine jeder Art es im Datensatz gibt:
 
    df["species"].value_counts()
    
-Solche kurzen Daten lassen sich gut als Plot darstellen:
+Solche kurzen Daten lassen sich gut als Balkendiagramm darstellen:
 
 .. code:: python3
    
-   df["species"].value_counts().plot.bar()
+   count = df["species"].value_counts()
+   sns.barplot(data=count, x="species", y="count")
 
 Aufgabe 6: Pivot-Tabellen
 -------------------------
 
-Du kannst nach einer oder mehreren Kategorien auch gruppieren. 
-Dies nennt man eine **Pivot-Tabelle**:
+Du kannst auch nach einer Kategorie **aggregieren**:
 
 .. code:: python3
 
-   pd.pivot_table(data=df, index="species", values="bill_length_mm", aggfunc="mean")
-   pd.pivot_table(data=df, index="species", columns="sex", 
-                  values="bill_length_mm", aggfunc="mean")
+   df.group_by(by="species").mean()
 
-Auch eine Pivot-Tabelle läßt sich gut plotten:
+Eine Aggregation nach zwei Kategorien nennt man eine **Pivot-Tabelle**:
 
 .. code:: python3
 
-   pivot = pd.pivot_table(data=df, index="species", columns="sex", 
-                          values="bill_length_mm", aggfunc="mean")
-   pivot.plot.bar()
+   piv = df.pivot(on="species", index="sex", values="bill_length_mm", aggregate_function="mean")
+   piv
+
+Auch eine Pivot-Tabelle läßt sich plotten. Allerdings müssen wir die Daten dazu umsortieren:
+
+.. code:: python3
+
+   df_long = piv.unpivot(index="sex", variable_name="species", value_name="bill_length")
+   df_long
+
+und
+
+.. code:: python3
+
+   sns.barplot(data=df_long, x="sex", y="bill_length", hue="species")
 
 Aufgabe 7: Weitere Diagramme
 ----------------------------

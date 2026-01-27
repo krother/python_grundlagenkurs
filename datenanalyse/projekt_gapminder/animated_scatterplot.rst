@@ -5,6 +5,12 @@ Animierter Scatterplot
 In dieser Übung werden wir den Zusammenhang von Lebenserwartung und Fruchtbarkeit untersuchen.
 Dazu werden wir die berühmte Animation von **Hans Rosling** nachstellen (siehe `Hans Rosling - Global population growth, box by box <https://www.youtube.com/watch?v=fTznEIZRkLg>`__.
 
+.. warning::
+
+   Diese Übung verwendet die ältere Bibliothek `pandas`.
+   Diese wird allmählich von `polars` abgelöst.
+   
+   Der Code hier ist noch nicht umgestellt.
 
 Schritt 1
 ---------
