@@ -85,7 +85,7 @@ Ermittle Namen die besonders häufig vorkommen:
 
 .. code:: python3
 
-   top = df[df["anzahl"] > 10000]
+   top = df.filter(pl.col("anzahl") > 10000)
 
 Gib die Namen aus.
 
@@ -126,7 +126,6 @@ Hier ist ein Stück Code, der alle Jahrgänge einliest:
    pfad = "daten/"
    for fn in os.listdir(pfad):
        if fn.startswith("yob"):
-           df = pd.read_csv(columns=["name", "geschlect", "anzahl"])
            df = pl.read_csv(pfad + fn,
                     has_header=False,
                     new_columns=["name", "geschlecht", "anzahl"]

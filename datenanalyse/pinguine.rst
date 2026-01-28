@@ -15,8 +15,10 @@ Installiere einige Bibliotheken:
 
     pip install polars seaborn
     pip install fastexcel xlsxwriter
-    pip install jupyter
     pip install pyarrow
+
+Jupyter starten
+---------------
 
 Starte nun die interaktive Jupyter-Umgebung. Diese eignet sich für die Datenanalyse deutlich besser als ``.py``-Dateien.
 Gib dazu im Terminal ein:
